@@ -1,0 +1,3 @@
+[submodule "icssi-2026-hackathon"]
+	path = icssi-2026-hackathon
+	url = git@github.com:LarremoreLab/icssi-2026-hackathon.git
