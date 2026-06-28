@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "count": 256,
+    "db_response_time_ms": 2,
+    "page": 1,
+    "per_page": 5
+  },
+  "results": [
+    {
+      "id": "https://openalex.org/T10192",
+      "display_name": "Catalytic Processes in Materials Science",
+      "description": "This cluster of papers covers advances in the research of catalytic nanomaterials, particularly focusing on the catalytic properties of nanoparticles, metal-support interactions, low-temperature oxida",
+      "works_count": 224150,
+      "cited_by_count": 4808362
+    },
+    {
+      "id": "https://openalex.org/T10325",
+      "display_name": "Astro and Planetary Science",
+      "description": "This cluster of papers explores the formation and evolution of the Solar System, including topics such as the abundances and compositions of various celestial bodies, the chronology of planetary forma",
+      "works_count": 321617,
+      "cited_by_count": 2862626
+    },
+    {
+      "id": "https://openalex.org/T10778",
+      "display_name": "Philosophy and History of Science",
+      "description": "This cluster of papers explores the concept of mechanistic explanation in scientific discovery and evolution, encompassing topics such as evolutionary synthesis, causation, genetic information, scient",
+      "works_count": 104837,
+      "cited_by_count": 1312270
+    },
+    {
+      "id": "https://openalex.org/T10406",
+      "display_name": "Planetary Science and Exploration",
+      "description": "This cluster of papers focuses on the exploration and study of Mars, including the Martian surface, planetary exploration missions, the search for water and signs of life, the Martian climate, mineral",
+      "works_count": 187468,
+      "cited_by_count": 1632819
+    },
+    {
+      "id": "https://openalex.org/T10072",
+      "display_name": "Science Education and Pedagogy",
+      "description": "This cluster of papers explores the enhancement of science education through inquiry-based teaching, argumentation discourse, and the development of scientific literacy. It delves into topics such as ",
+      "works_count": 87485,
+      "cited_by_count": 1044830
+    }
+  ]
+}

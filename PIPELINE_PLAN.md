@@ -64,33 +64,33 @@ small hand-labeled set.
 ## 3. Master checklist
 
 ### Foundation
-- [ ] **S0.** Bootstrap altendor packaging, lint/type/test, output paths, gitignore
-- [ ] **S2.** Deciban rubric + calibration JSONL skeleton
+- [x] **S0.** Bootstrap altendor packaging, lint/type/test, output paths, gitignore
+- [x] **S2.** Deciban rubric + calibration JSONL skeleton
 
 ### Data acquisition (each stage owns its local shape)
-- [ ] **S3.** OpenAlex keyword/topic source → DOI list
-- [ ] **S4.** BigQuery query builders + preflight wiring
-- [ ] **S5.** Altmetric source: DOIs → ranked papers → posts
-- [ ] **S6.** Enrichment: Bluesky text + thread resolution
-- [ ] **S7.** Enrichment: Reddit text + reply resolution
-- [ ] **S8.** Text resolver dispatcher (uses S6, S7; falls back to `posts.title`)
+- [x] **S3.** OpenAlex keyword/topic source → DOI list
+- [x] **S4.** BigQuery query builders + preflight wiring
+- [x] **S5.** Altmetric source: DOIs → ranked papers → posts
+- [x] **S6.** Enrichment: Bluesky text + thread resolution
+- [x] **S7.** Enrichment: Reddit text + reply resolution
+- [x] **S8.** Text resolver dispatcher (uses S6, S7; falls back to `posts.title`)
 
 ### Classification
-- [ ] **S9.** Classifier prompt (system + exemplars), cached
-- [ ] **S10.** Single-post classifier (Claude tool-use → local discriminated union)
-- [ ] **S11.** Batch classifier (Anthropic Batches API)
-- [ ] **S12.** Calibration gate (notebook 4 + pytest live test)
-- [ ] **S13.** Reply traversal (depth 1, Bluesky + Reddit)
+- [x] **S9.** Classifier prompt (system + exemplars), cached
+- [x] **S10.** Single-post classifier (Claude tool-use → local discriminated union)
+- [x] **S11.** Batch classifier (Anthropic Batches API)
+- [x] **S12.** Calibration gate (notebook 4 + pytest live test)
+- [x] **S13.** Reply traversal (depth 1, Bluesky + Reddit)
 
 ### Assembly (integration boundary — canonical schema crystallizes HERE)
-- [ ] **S14.** Claim clustering (Haiku one-shot, 3..7 clusters/paper)
-- [ ] **S15.** Paper → Question routing (Haiku, diversification)
+- [x] **S14.** Claim clustering (Haiku one-shot, 3..7 clusters/paper)
+- [x] **S15.** Paper → Question routing (Haiku, diversification)
 - [ ] **S16.** Define `IntermediateDebate` schema (from upstream outputs + DeltaBay loader needs) + build it
 - [ ] **S17.** Write neutral `debate.json`
 
 ### Notebooks (linear orchestrators)
-- [ ] **S18.** Notebook `1_select_papers.ipynb` (dry-run + run, separate cells)
-- [ ] **S19.** Notebook `2_gather_posts.ipynb`
+- [x] **S18.** Notebook `1_select_papers.ipynb` (dry-run + run, separate cells)
+- [x] **S19.** Notebook `2_gather_posts.ipynb`
 - [ ] **S20.** Notebook `3_enrich_text.ipynb`
 - [ ] **S21.** Notebook `4_calibrate_classifier.ipynb` (gate)
 - [ ] **S22.** Notebook `5_classify_batch.ipynb` (+ fallback toggle)
@@ -420,6 +420,11 @@ post DataFrame.
 
 **Local shape (this stage owns it).**
 - `papers` DataFrame columns: `doi: str, ro_id: str, title: str, abstract: str | None, altmetric_score: float, last_mentioned_at: datetime`.
+  - **Note:** `research_outputs` on GBQ has no `abstract` column. Fetch the
+    abstract from OpenAlex (`/works/doi:<doi>` returns `abstract_inverted_index`
+    which we reconstruct, or use the `display_name`+`abstract_inverted_index`
+    on the works page). Implement an `enrich_with_openalex_abstracts(df)`
+    helper here that calls OpenAlex per-DOI and merges in.
 - `posts` DataFrame columns: `post_id: str, ro_id: str, type: str, subtype: str | None, date: datetime, url: str, title: str, attention_source: dict, retweet: bool`.
 
 **Outputs.**

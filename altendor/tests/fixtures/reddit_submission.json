@@ -1,0 +1,26 @@
+{
+  "id": "abc123",
+  "permalink": "/r/Scientometrics/comments/abc123/title/",
+  "selftext": "Body of the post.",
+  "title": "Post title",
+  "author": "user_name",
+  "created_utc": 1700000000.0,
+  "comments": [
+    {
+      "id": "cmt1",
+      "body": "First reply",
+      "author": "alice",
+      "created_utc": 1700000100.0,
+      "permalink": "/r/Scientometrics/comments/abc123/title/cmt1/",
+      "replies": []
+    },
+    {
+      "id": "cmt2",
+      "body": "Second reply",
+      "author": null,
+      "created_utc": 1700000200.0,
+      "permalink": "/r/Scientometrics/comments/abc123/title/cmt2/",
+      "replies": []
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "count": 5281169,
+    "db_response_time_ms": 265,
+    "page": null,
+    "per_page": 5,
+    "next_cursor": "Ils0NTQwLjMxMiwgMTE3Nzk3NzYwMDAwMCwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1cyMDg3NDg0ODg1J10i"
+  },
+  "results": [
+    {
+      "id": "https://openalex.org/W4300870773",
+      "doi": "https://doi.org/10.2307/1270020",
+      "display_name": "Statistical Power Analysis for the Behavioral Sciences",
+      "publication_year": 1989
+    },
+    {
+      "id": "https://openalex.org/W2107031757",
+      "doi": "https://doi.org/10.1016/0198-9715(90)90050-4",
+      "display_name": "Statistical power analysis for the behavioral sciences",
+      "publication_year": 1990
+    },
+    {
+      "id": "https://openalex.org/W2002664886",
+      "doi": "https://doi.org/10.2307/3498751",
+      "display_name": "Nonparametric Statistics for the Behavioral Sciences",
+      "publication_year": 1958
+    },
+    {
+      "id": "https://openalex.org/W2561675875",
+      "doi": "https://doi.org/10.1108/ir.1999.04926fae.001",
+      "display_name": "Lecture Notes in Computer Science 1205",
+      "publication_year": 1999
+    },
+    {
+      "id": "https://openalex.org/W2087484885",
+      "doi": "https://doi.org/10.3758/bf03193146",
+      "display_name": "G*Power 3: A flexible statistical power analysis program for the social, behavioral, and biomedical sciences",
+      "publication_year": 2007
+    }
+  ]
+}

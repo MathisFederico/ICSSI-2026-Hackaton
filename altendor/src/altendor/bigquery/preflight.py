@@ -29,6 +29,7 @@ def preflight(
     sql: str,
     max_bytes: int = DEFAULT_MAX_BYTES,
     verbose: bool = True,
+    job_config: bigquery.QueryJobConfig | None = None,
 ) -> int:
     """Validate *sql* via a dry run and return an upper-bound bytes-scanned estimate.
 
@@ -39,6 +40,10 @@ def preflight(
             Defaults to 50 GiB.
         verbose: When True (default), print a one-line summary or a
             per-referenced-table breakdown.
+        job_config: Optional :class:`QueryJobConfig` carrying query
+            parameters. Its ``dry_run`` flag is forced to True; other
+            settings (notably ``query_parameters``) pass through so
+            parameterized SQL gets a meaningful estimate.
 
     Returns:
         The estimate in bytes.
@@ -48,7 +53,17 @@ def preflight(
             missing columns, missing permissions).
         QuerySizeExceeded: If the estimate exceeds *max_bytes*.
     """
-    dry = client.query(sql, job_config=bigquery.QueryJobConfig(dry_run=True))
+    if job_config is None:
+        dry_config = bigquery.QueryJobConfig(dry_run=True)
+    else:
+        # Reuse the caller's parameters but force dry_run on. Copy via
+        # query_parameters (the only field we care about for dry runs) so
+        # we don't mutate the caller's config.
+        dry_config = bigquery.QueryJobConfig(
+            dry_run=True,
+            query_parameters=list(job_config.query_parameters or []),
+        )
+    dry = client.query(sql, job_config=dry_config)
     if dry.errors:
         raise ValueError(f"Query failed validation: {dry.errors}")
 

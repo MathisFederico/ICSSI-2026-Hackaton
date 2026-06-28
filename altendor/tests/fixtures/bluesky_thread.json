@@ -1,0 +1,1042 @@
+{
+  "thread": {
+    "post": {
+      "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e",
+      "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+      "author": {
+        "did": "did:plc:tbqqvyv6pjjww44glrmycaxl",
+        "handle": "carlbergstrom.com",
+        "displayName": "Carl T. Bergstrom",
+        "associated": {},
+        "createdAt": "2023-04-27T05:59:56.441Z"
+      },
+      "record": {
+        "createdAt": "2026-06-27T23:20:43.953Z",
+        "langs": [
+          "en"
+        ],
+        "text": "To the reviewer who asked us to cite *fourteen* of his unrelated papers and then when we declined, submitted a comment with *fifteen* irrelevant self-citations:\n\nBro, I know you dabble in bibliometrics but for fuck's sake it just doesn't matter that much\u2014find a kernel of self-respect."
+      },
+      "bookmarkCount": 6,
+      "replyCount": 16,
+      "repostCount": 22,
+      "likeCount": 406,
+      "quoteCount": 5,
+      "indexedAt": "2026-06-27T23:20:44.468Z"
+    },
+    "replies": [
+      {
+        "post": {
+          "uri": "at://did:plc:ulo5wjl3dead62nnnyywprnq/app.bsky.feed.post/3mpclyle6nk2n",
+          "cid": "bafyreiaetrfrtfgkggxze2kjszqlwi7ho67x5onbkkgfqmi76udd2lkuwu",
+          "author": {
+            "did": "did:plc:ulo5wjl3dead62nnnyywprnq",
+            "handle": "ladylettera32.bsky.social",
+            "displayName": "Lady Lettera \ud83d\ude37 \ud83c\udf41",
+            "associated": {},
+            "createdAt": "2023-10-02T17:48:28.456Z"
+          },
+          "record": {
+            "createdAt": "2026-06-27T23:21:44.935Z",
+            "langs": [
+              "en"
+            ],
+            "reply": {
+              "parent": {
+                "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+              },
+              "root": {
+                "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+              }
+            },
+            "text": "Wooooow"
+          },
+          "bookmarkCount": 0,
+          "replyCount": 0,
+          "repostCount": 0,
+          "likeCount": 3,
+          "quoteCount": 0,
+          "indexedAt": "2026-06-27T23:21:45.378Z"
+        },
+        "replies": [],
+        "threadContext": {
+          "rootAuthorLike": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.like/3mpclyypml62g"
+        }
+      },
+      {
+        "post": {
+          "uri": "at://did:plc:tnvtbxr6sbahbt2xs5h5hvue/app.bsky.feed.post/3mpcnispgas25",
+          "cid": "bafyreigqjusrjljquqej24sskwa6htq37i2scc4bogjvnyccwdf4vre5ui",
+          "author": {
+            "did": "did:plc:tnvtbxr6sbahbt2xs5h5hvue",
+            "handle": "rogerwagnermdphd.bsky.social",
+            "displayName": "RogerWagnerMDPhD",
+            "associated": {},
+            "createdAt": "2023-09-19T17:22:40.127Z"
+          },
+          "record": {
+            "createdAt": "2026-06-27T23:48:43.247Z",
+            "langs": [
+              "en"
+            ],
+            "reply": {
+              "parent": {
+                "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+              },
+              "root": {
+                "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+              }
+            },
+            "text": "\u201cSee Citations in the online supplement.\u201d\n\n\ud83e\udd23"
+          },
+          "bookmarkCount": 0,
+          "replyCount": 0,
+          "repostCount": 0,
+          "likeCount": 7,
+          "quoteCount": 0,
+          "indexedAt": "2026-06-27T23:48:44.059Z"
+        },
+        "replies": [],
+        "threadContext": {
+          "rootAuthorLike": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.like/3mpcnne3y5n2r"
+        }
+      },
+      {
+        "post": {
+          "uri": "at://did:plc:rthx4kudei26yfmilrsklucz/app.bsky.feed.post/3mpcn5xqkb22j",
+          "cid": "bafyreie6g5bxubzecfut4ij5ilpfbixv5zx3ysqjnds75fdx7ykq23fkvy",
+          "author": {
+            "did": "did:plc:rthx4kudei26yfmilrsklucz",
+            "handle": "greedling1729.bsky.social",
+            "displayName": "Greedling",
+            "associated": {},
+            "createdAt": "2023-09-06T22:07:34.548Z"
+          },
+          "record": {
+            "createdAt": "2026-06-27T23:42:39.423Z",
+            "langs": [
+              "en"
+            ],
+            "reply": {
+              "parent": {
+                "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+              },
+              "root": {
+                "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+              }
+            },
+            "text": "The Future of peer review:\nwww.experimental-history.com/p/the-rise-a..."
+          },
+          "bookmarkCount": 3,
+          "replyCount": 0,
+          "repostCount": 1,
+          "likeCount": 4,
+          "quoteCount": 0,
+          "indexedAt": "2026-06-27T23:42:41.163Z"
+        },
+        "replies": [],
+        "threadContext": {}
+      },
+      {
+        "post": {
+          "uri": "at://did:plc:rrmt7f5eexmmrz2yoepqxrl3/app.bsky.feed.post/3mpcowmws6c2b",
+          "cid": "bafyreigahiqjhzzympx33t7cxpsy3qah5gwkymwrrirbuuuojdfzcs53xm",
+          "author": {
+            "did": "did:plc:rrmt7f5eexmmrz2yoepqxrl3",
+            "handle": "ideocene.eurosky.social",
+            "displayName": "Leah",
+            "associated": {},
+            "createdAt": "2023-10-04T16:52:22.393Z"
+          },
+          "record": {
+            "createdAt": "2026-06-28T00:14:20.709Z",
+            "langs": [
+              "en"
+            ],
+            "reply": {
+              "parent": {
+                "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+              },
+              "root": {
+                "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+              }
+            },
+            "text": "The secondhand cringe I'm experiencing is off the chart, Carl"
+          },
+          "bookmarkCount": 0,
+          "replyCount": 0,
+          "repostCount": 0,
+          "likeCount": 5,
+          "quoteCount": 0,
+          "indexedAt": "2026-06-28T00:14:27.062Z"
+        },
+        "replies": [],
+        "threadContext": {
+          "rootAuthorLike": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.like/3mpd46xof6f26"
+        }
+      },
+      {
+        "post": {
+          "uri": "at://did:plc:q25tg5qy6kzwtuecpe6b4shw/app.bsky.feed.post/3mpcoi2gpwk2o",
+          "cid": "bafyreicihl3g2zrzp5dewuew4dnz5thxmhd2qdqnwgq6b2lpfytzgv6ksi",
+          "author": {
+            "did": "did:plc:q25tg5qy6kzwtuecpe6b4shw",
+            "handle": "merz.bsky.social",
+            "displayName": "Alex Merz \ud83c\uddfa\ud83c\uddf8\ud83c\udde8\ud83c\udde6\ud83c\uddfa\ud83c\udde6",
+            "associated": {},
+            "createdAt": "2023-05-15T03:52:18.364Z"
+          },
+          "record": {
+            "createdAt": "2026-06-28T00:06:11.546Z",
+            "langs": [
+              "en"
+            ],
+            "reply": {
+              "parent": {
+                "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+              },
+              "root": {
+                "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+              }
+            },
+            "text": "You prompted me to go back and look at the reviews from one of the papers I am most proud of. We were accused of not citing another lab's work enough\u2026"
+          },
+          "bookmarkCount": 0,
+          "replyCount": 1,
+          "repostCount": 0,
+          "likeCount": 7,
+          "quoteCount": 0,
+          "indexedAt": "2026-06-28T00:06:12.363Z"
+        },
+        "replies": [
+          {
+            "post": {
+              "uri": "at://did:plc:q25tg5qy6kzwtuecpe6b4shw/app.bsky.feed.post/3mpcolr4dek2o",
+              "cid": "bafyreif6esvgmsa7fxlq4jro3pt3re3ueic5th67qrqf6k67cq4wxxq26a",
+              "author": {
+                "did": "did:plc:q25tg5qy6kzwtuecpe6b4shw",
+                "handle": "merz.bsky.social",
+                "displayName": "Alex Merz \ud83c\uddfa\ud83c\uddf8\ud83c\udde8\ud83c\udde6\ud83c\uddfa\ud83c\udde6",
+                "associated": {},
+                "createdAt": "2023-05-15T03:52:18.364Z"
+              },
+              "record": {
+                "createdAt": "2026-06-28T00:08:15.987Z",
+                "langs": [
+                  "en"
+                ],
+                "reply": {
+                  "parent": {
+                    "cid": "bafyreicihl3g2zrzp5dewuew4dnz5thxmhd2qdqnwgq6b2lpfytzgv6ksi",
+                    "uri": "at://did:plc:q25tg5qy6kzwtuecpe6b4shw/app.bsky.feed.post/3mpcoi2gpwk2o"
+                  },
+                  "root": {
+                    "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                    "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+                  }
+                },
+                "text": "\u2026We pointed out that in the original manuscript we had cited 16 of their papers, and now cited 18, but more importantly, we thanked them for the opportunity to cite more outstanding, even earlier work from other labs that competed with  them.\n\ud83d\ude08"
+              },
+              "bookmarkCount": 0,
+              "replyCount": 1,
+              "repostCount": 0,
+              "likeCount": 13,
+              "quoteCount": 0,
+              "indexedAt": "2026-06-28T00:08:16.373Z"
+            },
+            "threadContext": {
+              "rootAuthorLike": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.like/3mpd47gkrhq2a"
+            }
+          }
+        ],
+        "threadContext": {
+          "rootAuthorLike": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.like/3mpd47adneb24"
+        }
+      },
+      {
+        "post": {
+          "uri": "at://did:plc:oclqhr3bchhxe42nd3dses7g/app.bsky.feed.post/3mpcmaogios2n",
+          "cid": "bafyreibqc5qyjdjpasu7cmq6qsmwnwkfucibzdlzlvaixc6l57tjva4zxm",
+          "author": {
+            "did": "did:plc:oclqhr3bchhxe42nd3dses7g",
+            "handle": "jamespirruccello.com",
+            "displayName": "James Pirruccello \ud83c\udf09",
+            "associated": {},
+            "createdAt": "2023-06-27T05:02:12.652Z"
+          },
+          "record": {
+            "createdAt": "2026-06-27T23:26:16.591Z",
+            "langs": [
+              "en"
+            ],
+            "reply": {
+              "parent": {
+                "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+              },
+              "root": {
+                "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+              }
+            },
+            "text": "It's really the responsibility of editors to get involved when something like that happens."
+          },
+          "bookmarkCount": 1,
+          "replyCount": 3,
+          "repostCount": 0,
+          "likeCount": 35,
+          "quoteCount": 0,
+          "indexedAt": "2026-06-27T23:26:17.170Z"
+        },
+        "replies": [
+          {
+            "post": {
+              "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpcmhkuj7c2n",
+              "cid": "bafyreia4hdqxydnw5ansgaxewftgi2ewir3g3b7j66n3e6geluftslyf24",
+              "author": {
+                "did": "did:plc:tbqqvyv6pjjww44glrmycaxl",
+                "handle": "carlbergstrom.com",
+                "displayName": "Carl T. Bergstrom",
+                "associated": {},
+                "createdAt": "2023-04-27T05:59:56.441Z"
+              },
+              "record": {
+                "createdAt": "2026-06-27T23:30:07.738Z",
+                "langs": [
+                  "en"
+                ],
+                "reply": {
+                  "parent": {
+                    "cid": "bafyreibqc5qyjdjpasu7cmq6qsmwnwkfucibzdlzlvaixc6l57tjva4zxm",
+                    "uri": "at://did:plc:oclqhr3bchhxe42nd3dses7g/app.bsky.feed.post/3mpcmaogios2n"
+                  },
+                  "root": {
+                    "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                    "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+                  }
+                },
+                "text": "Yes! In a paper I recently edited, I wrote this to the author.\n\n\"You will see that reviewer 3 is an inordinate fan of Dr. ____. While I have no doubts that this work is excellent, I was unable to find the connection to your present paper and encourage you to be judicious in following their advice.\""
+              },
+              "bookmarkCount": 1,
+              "replyCount": 1,
+              "repostCount": 3,
+              "likeCount": 52,
+              "quoteCount": 0,
+              "indexedAt": "2026-06-27T23:30:08.175Z"
+            },
+            "threadContext": {}
+          },
+          {
+            "post": {
+              "uri": "at://did:plc:lft462ctqhofh3jdikbr5y5r/app.bsky.feed.post/3mpdfo6tahs2t",
+              "cid": "bafyreibcggwodklxyjfbwjn6ueost5qstlycs4mw2onanlu6tzuojx6qha",
+              "author": {
+                "did": "did:plc:lft462ctqhofh3jdikbr5y5r",
+                "handle": "andreavicere.bsky.social",
+                "displayName": "Andrea Vicer\u00e9",
+                "associated": {},
+                "createdAt": "2023-10-02T19:47:48.058Z"
+              },
+              "record": {
+                "createdAt": "2026-06-28T07:01:13.540Z",
+                "langs": [
+                  "en"
+                ],
+                "reply": {
+                  "parent": {
+                    "cid": "bafyreibqc5qyjdjpasu7cmq6qsmwnwkfucibzdlzlvaixc6l57tjva4zxm",
+                    "uri": "at://did:plc:oclqhr3bchhxe42nd3dses7g/app.bsky.feed.post/3mpcmaogios2n"
+                  },
+                  "root": {
+                    "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                    "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+                  }
+                },
+                "text": "Editors? Do they really exist? I doubt they do.\nIt occurred to me as a referee to reject a paper which was nonsensical, and my co-reviewer did the same.\nThe journal required a \"moderate revision\" and asked me to review it again.\nIf you're ready to pay APCs, you'll get published no matter what."
+              },
+              "bookmarkCount": 0,
+              "replyCount": 1,
+              "repostCount": 0,
+              "likeCount": 2,
+              "quoteCount": 0,
+              "indexedAt": "2026-06-28T07:01:14.567Z"
+            },
+            "threadContext": {}
+          },
+          {
+            "post": {
+              "uri": "at://did:plc:32v47lwr7jppbf73n4xhqmur/app.bsky.feed.post/3mpcmicgl3k26",
+              "cid": "bafyreignfitxxe4jz2xi7sbwykq3nogf2bhuwinjqtxgkfvta466e2rjce",
+              "author": {
+                "did": "did:plc:32v47lwr7jppbf73n4xhqmur",
+                "handle": "popher.bsky.social",
+                "displayName": "Will",
+                "associated": {},
+                "createdAt": "2023-10-14T20:11:49.006Z"
+              },
+              "record": {
+                "createdAt": "2026-06-27T23:30:32.447Z",
+                "langs": [
+                  "en"
+                ],
+                "reply": {
+                  "parent": {
+                    "cid": "bafyreibqc5qyjdjpasu7cmq6qsmwnwkfucibzdlzlvaixc6l57tjva4zxm",
+                    "uri": "at://did:plc:oclqhr3bchhxe42nd3dses7g/app.bsky.feed.post/3mpcmaogios2n"
+                  },
+                  "root": {
+                    "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                    "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+                  }
+                },
+                "text": "I'm always amazed how hands off editors can be with reviewers. \n\nI had a reviewer complain about violin plots in my paper - and he compared them to female genitalia... And I'm like, wtf editor? You allow that?"
+              },
+              "bookmarkCount": 0,
+              "replyCount": 3,
+              "repostCount": 0,
+              "likeCount": 7,
+              "quoteCount": 0,
+              "indexedAt": "2026-06-27T23:30:32.970Z"
+            },
+            "threadContext": {
+              "rootAuthorLike": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.like/3mpcn2aumpg2o"
+            }
+          }
+        ],
+        "threadContext": {
+          "rootAuthorLike": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.like/3mpcmaxcfog25"
+        }
+      },
+      {
+        "post": {
+          "uri": "at://did:plc:m5couoefqm7eoqvvmzl4roug/app.bsky.feed.post/3mpcmnx7zu22s",
+          "cid": "bafyreibpez63bml5kj24vjonmyjje7xh4olcjxmg64y2zl6sjsn7bw5bfm",
+          "author": {
+            "did": "did:plc:m5couoefqm7eoqvvmzl4roug",
+            "handle": "tngrine.bsky.social",
+            "displayName": "Tangerine",
+            "associated": {},
+            "createdAt": "2024-01-11T19:55:47.466Z"
+          },
+          "record": {
+            "createdAt": "2026-06-27T23:33:42.023Z",
+            "langs": [
+              "en"
+            ],
+            "reply": {
+              "parent": {
+                "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+              },
+              "root": {
+                "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+              }
+            },
+            "text": "This is a great head fake to make authors think you're someone else"
+          },
+          "bookmarkCount": 0,
+          "replyCount": 0,
+          "repostCount": 0,
+          "likeCount": 6,
+          "quoteCount": 0,
+          "indexedAt": "2026-06-27T23:33:42.773Z"
+        },
+        "replies": [],
+        "threadContext": {
+          "rootAuthorLike": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.like/3mpcnbcpeqw2w"
+        }
+      },
+      {
+        "post": {
+          "uri": "at://did:plc:lbvb2ybgrqz3qhfcv773363t/app.bsky.feed.post/3mpd6nx3ap22s",
+          "cid": "bafyreifhde7baoue45njuapjeljijmwxug4rlddmtcnwur43hr3iydskua",
+          "author": {
+            "did": "did:plc:lbvb2ybgrqz3qhfcv773363t",
+            "handle": "rachelbc.bsky.social",
+            "displayName": "Rachel \ud83c\udf0e\ud83d\ude80\ud83d\udef0\ufe0f\ud83d\udd2d\ud83d\udcab",
+            "associated": {},
+            "createdAt": "2024-11-13T03:23:23.585Z"
+          },
+          "record": {
+            "createdAt": "2026-06-28T04:55:49.221Z",
+            "langs": [
+              "en"
+            ],
+            "reply": {
+              "parent": {
+                "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+              },
+              "root": {
+                "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+              }
+            },
+            "text": ""
+          },
+          "bookmarkCount": 0,
+          "replyCount": 0,
+          "repostCount": 0,
+          "likeCount": 1,
+          "quoteCount": 0,
+          "indexedAt": "2026-06-28T04:55:50.165Z"
+        },
+        "replies": [],
+        "threadContext": {}
+      },
+      {
+        "post": {
+          "uri": "at://did:plc:dfchi5yxq56tg5yutnokcwji/app.bsky.feed.post/3mpdybpysek2n",
+          "cid": "bafyreiflo35n56dcedtekci27yihgbtnwvnbx3qxyhlfay6mdnhla74w74",
+          "author": {
+            "did": "did:plc:dfchi5yxq56tg5yutnokcwji",
+            "handle": "fionatolan.bsky.social",
+            "displayName": "Dr Fiona Tolan",
+            "associated": {},
+            "createdAt": "2024-11-13T21:43:50.578Z"
+          },
+          "record": {
+            "createdAt": "2026-06-28T12:34:16.432Z",
+            "langs": [
+              "en"
+            ],
+            "reply": {
+              "parent": {
+                "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+              },
+              "root": {
+                "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+              }
+            },
+            "text": "When I once recommended an author cite my paper I wrote to the editor to apologise and explain it was literally one of only 2 articles I knew on the topic central to the article under review. It would have definitely helped the author support their argument & I was still embarrassed to be doing it!"
+          },
+          "bookmarkCount": 0,
+          "replyCount": 0,
+          "repostCount": 0,
+          "likeCount": 1,
+          "quoteCount": 0,
+          "indexedAt": "2026-06-28T12:34:17.165Z"
+        },
+        "replies": [],
+        "threadContext": {}
+      },
+      {
+        "post": {
+          "uri": "at://did:plc:bzplhh76qbo5phsa742qiix5/app.bsky.feed.post/3mpcmbrq2722z",
+          "cid": "bafyreidr2ydor7vohzwjslfg5hnfegjdfdzqojhcgise3rvmopubwc25ea",
+          "author": {
+            "did": "did:plc:bzplhh76qbo5phsa742qiix5",
+            "handle": "jugistoteles.bsky.social",
+            "displayName": "Jukka Rintam\u00e4ki",
+            "associated": {},
+            "createdAt": "2023-09-25T17:50:39.489Z"
+          },
+          "record": {
+            "createdAt": "2026-06-27T23:26:53.604Z",
+            "langs": [
+              "en"
+            ],
+            "reply": {
+              "parent": {
+                "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+              },
+              "root": {
+                "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+              }
+            },
+            "text": "One day, I hope this happens to me AND I pass the review so that in the Acknowledgments, I can thank Reviewer X who generously recommended [Smith] 2004, 2005a, 2005b, 2008..."
+          },
+          "bookmarkCount": 1,
+          "replyCount": 2,
+          "repostCount": 0,
+          "likeCount": 23,
+          "quoteCount": 0,
+          "indexedAt": "2026-06-27T23:26:53.676Z"
+        },
+        "replies": [
+          {
+            "post": {
+              "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpcmzukcj22n",
+              "cid": "bafyreihe6sy7xgh3dmnek2p4hiowgxjux56tj72oduuftssw3qnmhouwny",
+              "author": {
+                "did": "did:plc:tbqqvyv6pjjww44glrmycaxl",
+                "handle": "carlbergstrom.com",
+                "displayName": "Carl T. Bergstrom",
+                "associated": {},
+                "createdAt": "2023-04-27T05:59:56.441Z"
+              },
+              "record": {
+                "createdAt": "2026-06-27T23:40:21.868Z",
+                "langs": [
+                  "en"
+                ],
+                "reply": {
+                  "parent": {
+                    "cid": "bafyreidr2ydor7vohzwjslfg5hnfegjdfdzqojhcgise3rvmopubwc25ea",
+                    "uri": "at://did:plc:bzplhh76qbo5phsa742qiix5/app.bsky.feed.post/3mpcmbrq2722z"
+                  },
+                  "root": {
+                    "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                    "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+                  }
+                },
+                "text": "I like that!"
+              },
+              "bookmarkCount": 0,
+              "replyCount": 0,
+              "repostCount": 0,
+              "likeCount": 3,
+              "quoteCount": 0,
+              "indexedAt": "2026-06-27T23:40:22.373Z"
+            },
+            "threadContext": {}
+          },
+          {
+            "post": {
+              "uri": "at://did:plc:rcxyibhzcrkyqwjow4yddom6/app.bsky.feed.post/3mpcmlfh7l22z",
+              "cid": "bafyreifl2thrznxi5moeadnlnu4kfpinwufdnshu4nfahg7z34hsut33de",
+              "author": {
+                "did": "did:plc:rcxyibhzcrkyqwjow4yddom6",
+                "handle": "ryanhisner.bsky.social",
+                "displayName": "Ryan Hisner",
+                "associated": {},
+                "createdAt": "2023-09-19T10:32:17.731Z"
+              },
+              "record": {
+                "createdAt": "2026-06-27T23:32:16.277Z",
+                "langs": [
+                  "en"
+                ],
+                "reply": {
+                  "parent": {
+                    "cid": "bafyreidr2ydor7vohzwjslfg5hnfegjdfdzqojhcgise3rvmopubwc25ea",
+                    "uri": "at://did:plc:bzplhh76qbo5phsa742qiix5/app.bsky.feed.post/3mpcmbrq2722z"
+                  },
+                  "root": {
+                    "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                    "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+                  }
+                },
+                "text": "Hahaha, this would be great. I have a devilish desire to do something vaguely similar (not directed at reviewers but at a different sort of bad actor). Will see if I can smuggle it in when it comes time to submit a couple papers currently in preprint."
+              },
+              "bookmarkCount": 0,
+              "replyCount": 1,
+              "repostCount": 0,
+              "likeCount": 5,
+              "quoteCount": 0,
+              "indexedAt": "2026-06-27T23:32:17.060Z"
+            },
+            "threadContext": {
+              "rootAuthorLike": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.like/3mpcmzptjq323"
+            }
+          }
+        ],
+        "threadContext": {
+          "rootAuthorLike": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.like/3mpcmzjx6yt2r"
+        }
+      },
+      {
+        "post": {
+          "uri": "at://did:plc:bom4p44masckbj7vnfm6aunp/app.bsky.feed.post/3mpecoxozg227",
+          "cid": "bafyreih27uw3s34dnvt47feutrnubogtribagv6bpza5u3a7cuyyqzvkka",
+          "author": {
+            "did": "did:plc:bom4p44masckbj7vnfm6aunp",
+            "handle": "deevybee.bsky.social",
+            "displayName": "Dorothy Bishop",
+            "associated": {},
+            "createdAt": "2023-11-27T16:05:31.568Z"
+          },
+          "record": {
+            "createdAt": "2026-06-28T15:40:38.127Z",
+            "langs": [
+              "en"
+            ],
+            "reply": {
+              "parent": {
+                "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+              },
+              "root": {
+                "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+              }
+            },
+            "text": "Could be a case of a review mill www.tandfonline.com/doi/pdf/10.1....   In any case, the editor should notice this and intervene."
+          },
+          "bookmarkCount": 0,
+          "replyCount": 0,
+          "repostCount": 0,
+          "likeCount": 0,
+          "quoteCount": 0,
+          "indexedAt": "2026-06-28T15:40:39.172Z"
+        },
+        "replies": [],
+        "threadContext": {}
+      },
+      {
+        "post": {
+          "uri": "at://did:plc:bay2rtx3zmj2grd63mc4tpm4/app.bsky.feed.post/3mpcngb7l3c2o",
+          "cid": "bafyreicah2ab5caseepnnmyyp3bz47ejbminj5itut2wa4rt2tsb2s5cs4",
+          "author": {
+            "did": "did:plc:bay2rtx3zmj2grd63mc4tpm4",
+            "handle": "neonchinchilla.bsky.social",
+            "displayName": "Neon Chinchilla",
+            "associated": {},
+            "createdAt": "2023-06-25T15:35:16.269Z"
+          },
+          "record": {
+            "createdAt": "2026-06-27T23:47:17.801Z",
+            "langs": [
+              "en"
+            ],
+            "reply": {
+              "parent": {
+                "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+              },
+              "root": {
+                "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+              }
+            },
+            "text": "Just call him a nerd and push him into a locker."
+          },
+          "bookmarkCount": 0,
+          "replyCount": 0,
+          "repostCount": 0,
+          "likeCount": 4,
+          "quoteCount": 0,
+          "indexedAt": "2026-06-27T23:47:18.663Z"
+        },
+        "replies": [],
+        "threadContext": {}
+      },
+      {
+        "post": {
+          "uri": "at://did:plc:af6lb4vt2kqudsr4ds2p3mvd/app.bsky.feed.post/3mpdfs67yjk2d",
+          "cid": "bafyreibbijf5n4skgwacgu7vv5k5kpm74t3zu5qic2qjpawxgh34lxrua4",
+          "author": {
+            "did": "did:plc:af6lb4vt2kqudsr4ds2p3mvd",
+            "handle": "hoferu.bsky.social",
+            "displayName": "Ursula Hofer",
+            "associated": {},
+            "createdAt": "2024-12-06T12:52:42.947Z"
+          },
+          "record": {
+            "createdAt": "2026-06-28T07:03:27.125Z",
+            "langs": [
+              "en"
+            ],
+            "reply": {
+              "parent": {
+                "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+              },
+              "root": {
+                "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+              }
+            },
+            "text": "Editor's responsibility to address. I usually put a note saying that I politely disagree with the reviewer [exact wording I usually put, very Swiss \ud83d\ude02]."
+          },
+          "bookmarkCount": 0,
+          "replyCount": 0,
+          "repostCount": 0,
+          "likeCount": 1,
+          "quoteCount": 0,
+          "indexedAt": "2026-06-28T07:03:29.363Z"
+        },
+        "replies": [],
+        "threadContext": {
+          "rootAuthorLike": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.like/3mpdftm4xhv26"
+        }
+      },
+      {
+        "post": {
+          "uri": "at://did:plc:4ffx2ptgyrwmwq5iyf5rcg3v/app.bsky.feed.post/3mpclyyltc226",
+          "cid": "bafyreigcx7o4ccj2gjtdzb44vyj3aagroc3bi32jtdvtez5a3cdlkp24ra",
+          "author": {
+            "did": "did:plc:4ffx2ptgyrwmwq5iyf5rcg3v",
+            "handle": "eruptions.site",
+            "displayName": "Dr. Erik Klemetti Gonzalez",
+            "associated": {},
+            "createdAt": "2023-07-29T22:16:55.683Z"
+          },
+          "record": {
+            "createdAt": "2026-06-27T23:21:58.816Z",
+            "langs": [
+              "en"
+            ],
+            "reply": {
+              "parent": {
+                "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+              },
+              "root": {
+                "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+              }
+            },
+            "text": "I recently did a review and wanted to point out something in one of my papers and went out of my way to explain that I don\u2019t care if you cite this and I\u2019m not looking for a citation but hey, take a look."
+          },
+          "bookmarkCount": 0,
+          "replyCount": 3,
+          "repostCount": 0,
+          "likeCount": 15,
+          "quoteCount": 0,
+          "indexedAt": "2026-06-27T23:21:59.076Z"
+        },
+        "replies": [
+          {
+            "post": {
+              "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpcm2pda7k2n",
+              "cid": "bafyreiarfugw3pmtoajcmhgjoenoxzde563colcjqdajjb4aooftv62wxe",
+              "author": {
+                "did": "did:plc:tbqqvyv6pjjww44glrmycaxl",
+                "handle": "carlbergstrom.com",
+                "displayName": "Carl T. Bergstrom",
+                "associated": {},
+                "createdAt": "2023-04-27T05:59:56.441Z"
+              },
+              "record": {
+                "createdAt": "2026-06-27T23:22:56.207Z",
+                "langs": [
+                  "en"
+                ],
+                "reply": {
+                  "parent": {
+                    "cid": "bafyreigcx7o4ccj2gjtdzb44vyj3aagroc3bi32jtdvtez5a3cdlkp24ra",
+                    "uri": "at://did:plc:4ffx2ptgyrwmwq5iyf5rcg3v/app.bsky.feed.post/3mpclyyltc226"
+                  },
+                  "root": {
+                    "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                    "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+                  }
+                },
+                "text": "Yes. I do this as well."
+              },
+              "bookmarkCount": 0,
+              "replyCount": 0,
+              "repostCount": 0,
+              "likeCount": 6,
+              "quoteCount": 0,
+              "indexedAt": "2026-06-27T23:22:56.761Z"
+            },
+            "threadContext": {}
+          },
+          {
+            "post": {
+              "uri": "at://did:plc:k2zmszmwbgtc6pck4bqavkb2/app.bsky.feed.post/3mpcnouvqnk2v",
+              "cid": "bafyreidxhcyjcm6kosa3go3wqdxrvaqnkh3sjy4uzr4zsgp2s4amasonqy",
+              "author": {
+                "did": "did:plc:k2zmszmwbgtc6pck4bqavkb2",
+                "handle": "josephwb.bsky.social",
+                "displayName": "Joseph W. Brown",
+                "associated": {},
+                "createdAt": "2023-08-25T02:45:37.338Z"
+              },
+              "record": {
+                "createdAt": "2026-06-27T23:52:06.887Z",
+                "langs": [
+                  "en"
+                ],
+                "reply": {
+                  "parent": {
+                    "cid": "bafyreigcx7o4ccj2gjtdzb44vyj3aagroc3bi32jtdvtez5a3cdlkp24ra",
+                    "uri": "at://did:plc:4ffx2ptgyrwmwq5iyf5rcg3v/app.bsky.feed.post/3mpclyyltc226"
+                  },
+                  "root": {
+                    "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                    "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+                  }
+                },
+                "text": "I also explicitly inform the author when I note something from one of my papers (and only bring it up at all if I feel it was an important oversight)."
+              },
+              "bookmarkCount": 0,
+              "replyCount": 0,
+              "repostCount": 0,
+              "likeCount": 2,
+              "quoteCount": 0,
+              "indexedAt": "2026-06-27T23:52:07.575Z"
+            },
+            "threadContext": {
+              "rootAuthorLike": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.like/3mpcnweoqzk2w"
+            }
+          },
+          {
+            "post": {
+              "uri": "at://did:plc:55ew2ahdjqbdobdpqmissyiz/app.bsky.feed.post/3mpcm5jpprs2d",
+              "cid": "bafyreieygvtj2riy5yoreti7zzwbafilnfebhr5wx6hiknwjfxhnotjvgy",
+              "author": {
+                "did": "did:plc:55ew2ahdjqbdobdpqmissyiz",
+                "handle": "soniaahhh.bsky.social",
+                "displayName": "Dr Sonia",
+                "associated": {},
+                "createdAt": "2023-09-03T23:21:12.619Z"
+              },
+              "record": {
+                "createdAt": "2026-06-27T23:24:30.988Z",
+                "langs": [
+                  "en"
+                ],
+                "reply": {
+                  "parent": {
+                    "cid": "bafyreigcx7o4ccj2gjtdzb44vyj3aagroc3bi32jtdvtez5a3cdlkp24ra",
+                    "uri": "at://did:plc:4ffx2ptgyrwmwq5iyf5rcg3v/app.bsky.feed.post/3mpclyyltc226"
+                  },
+                  "root": {
+                    "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                    "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+                  }
+                },
+                "text": "Yes, there's pressure now not to seem like one of Those Reviewers"
+              },
+              "bookmarkCount": 0,
+              "replyCount": 0,
+              "repostCount": 0,
+              "likeCount": 2,
+              "quoteCount": 0,
+              "indexedAt": "2026-06-27T23:24:33.571Z"
+            },
+            "threadContext": {
+              "rootAuthorLike": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.like/3mpcmakkd3j2o"
+            }
+          }
+        ],
+        "threadContext": {
+          "rootAuthorLike": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.like/3mpcm2gvcjz2a"
+        }
+      },
+      {
+        "post": {
+          "uri": "at://did:plc:3slsn56g2wlbbhbuq4sjovp2/app.bsky.feed.post/3mpdblu5xq22k",
+          "cid": "bafyreih4alza36c4d44rhqorwdat4e7bcoopeo4ey5wf4hy5gvbvdvy7ye",
+          "author": {
+            "did": "did:plc:3slsn56g2wlbbhbuq4sjovp2",
+            "handle": "alexzski.bsky.social",
+            "displayName": "",
+            "associated": {},
+            "createdAt": "2023-08-13T03:52:45.771Z"
+          },
+          "record": {
+            "createdAt": "2026-06-28T05:48:20.281Z",
+            "langs": [
+              "en"
+            ],
+            "reply": {
+              "parent": {
+                "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+              },
+              "root": {
+                "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+              }
+            },
+            "text": "Is he working to boost his Erd\u0151s number?"
+          },
+          "bookmarkCount": 0,
+          "replyCount": 1,
+          "repostCount": 0,
+          "likeCount": 1,
+          "quoteCount": 0,
+          "indexedAt": "2026-06-28T05:48:20.768Z"
+        },
+        "replies": [
+          {
+            "post": {
+              "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpdd3e5pfs2t",
+              "cid": "bafyreihkdope46tngxkabzobcekv3mnyzdnpatct6y5dyivjl5lbekbf74",
+              "author": {
+                "did": "did:plc:tbqqvyv6pjjww44glrmycaxl",
+                "handle": "carlbergstrom.com",
+                "displayName": "Carl T. Bergstrom",
+                "associated": {},
+                "createdAt": "2023-04-27T05:59:56.441Z"
+              },
+              "record": {
+                "createdAt": "2026-06-28T06:14:54.108Z",
+                "langs": [
+                  "en"
+                ],
+                "reply": {
+                  "parent": {
+                    "cid": "bafyreih4alza36c4d44rhqorwdat4e7bcoopeo4ey5wf4hy5gvbvdvy7ye",
+                    "uri": "at://did:plc:3slsn56g2wlbbhbuq4sjovp2/app.bsky.feed.post/3mpdblu5xq22k"
+                  },
+                  "root": {
+                    "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                    "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+                  }
+                },
+                "text": "How does self-citation boost an Erd\u00f6s number?\n\n(Answer: it doesn't.)"
+              },
+              "bookmarkCount": 0,
+              "replyCount": 1,
+              "repostCount": 0,
+              "likeCount": 1,
+              "quoteCount": 0,
+              "indexedAt": "2026-06-28T06:14:55.070Z"
+            },
+            "threadContext": {}
+          }
+        ],
+        "threadContext": {}
+      },
+      {
+        "post": {
+          "uri": "at://did:plc:2iw6tytiglefftvwkkhu2xmp/app.bsky.feed.post/3mpdyx44bpk26",
+          "cid": "bafyreie4cev4rqqikhp6ytllpxfjtd2c2afv2qera5whg2sufivnke4n6a",
+          "author": {
+            "did": "did:plc:2iw6tytiglefftvwkkhu2xmp",
+            "handle": "yankeewitch.bsky.social",
+            "displayName": "",
+            "associated": {},
+            "createdAt": "2024-11-16T10:03:09.570Z"
+          },
+          "record": {
+            "createdAt": "2026-06-28T12:46:13.775Z",
+            "langs": [
+              "en"
+            ],
+            "reply": {
+              "parent": {
+                "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+              },
+              "root": {
+                "cid": "bafyreibrbngg63c56frz5l7bz5byu2wcnes5zv4iyr7fqpkfacnx6oegjm",
+                "uri": "at://did:plc:tbqqvyv6pjjww44glrmycaxl/app.bsky.feed.post/3mpclwr75w22e"
+              }
+            },
+            "text": "I sense someone who wants to juice his citation rate for his CV.  Job or promotion hunting?"
+          },
+          "bookmarkCount": 0,
+          "replyCount": 0,
+          "repostCount": 0,
+          "likeCount": 1,
+          "quoteCount": 0,
+          "indexedAt": "2026-06-28T12:46:14.566Z"
+        },
+        "replies": [],
+        "threadContext": {}
+      }
+    ],
+    "threadContext": {}
+  }
+}
