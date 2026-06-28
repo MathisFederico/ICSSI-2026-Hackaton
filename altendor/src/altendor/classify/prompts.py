@@ -291,17 +291,28 @@ def build_user_message(
     str
         Markdown-formatted user message ready to send as the user turn.
     """
-    abstract_line = paper_abstract.strip() if paper_abstract else "(no abstract available)"
-    url_line = post_url.strip() if post_url else "(no URL available)"
+    # Defensive coercion: callers sometimes hand us pandas NaN (a float) when a
+    # parquet column was empty. .strip() on a float would explode the pipeline.
+    def _s(value: object) -> str:
+        if value is None:
+            return ""
+        if isinstance(value, float) and value != value:  # NaN
+            return ""
+        return str(value).strip()
+
+    abstract_text = _s(paper_abstract)
+    url_text = _s(post_url)
+    abstract_line = abstract_text or "(no abstract available)"
+    url_line = url_text or "(no URL available)"
 
     parts = [
         "## Paper",
-        f"- Title: {paper_title.strip()}",
+        f"- Title: {_s(paper_title)}",
         f"- Abstract: {abstract_line}",
         "",
         "## Post",
         f"- URL: {url_line}",
-        f"- Text: {post_text.strip()}",
+        f"- Text: {_s(post_text)}",
     ]
 
     if text_confidence == "low":

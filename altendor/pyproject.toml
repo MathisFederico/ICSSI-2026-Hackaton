@@ -27,6 +27,7 @@ dependencies = [
     "praw>=8.0.2",
     "anthropic>=0.112.0",
     "pydantic>=2.13.4",
+    "nest-asyncio>=1.6.0",
 ]
 
 [build-system]

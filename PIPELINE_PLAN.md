@@ -85,28 +85,28 @@ small hand-labeled set.
 ### Assembly (integration boundary — canonical schema crystallizes HERE)
 - [x] **S14.** Claim clustering (Haiku one-shot, 3..7 clusters/paper)
 - [x] **S15.** Paper → Question routing (Haiku, diversification)
-- [ ] **S16.** Define `IntermediateDebate` schema (from upstream outputs + DeltaBay loader needs) + build it
-- [ ] **S17.** Write neutral `debate.json`
+- [x] **S16.** Define `IntermediateDebate` schema (from upstream outputs + DeltaBay loader needs) + build it
+- [x] **S17.** Write neutral `debate.json`
 
 ### Notebooks (linear orchestrators)
 - [x] **S18.** Notebook `1_select_papers.ipynb` (dry-run + run, separate cells)
 - [x] **S19.** Notebook `2_gather_posts.ipynb`
-- [ ] **S20.** Notebook `3_enrich_text.ipynb`
-- [ ] **S21.** Notebook `4_calibrate_classifier.ipynb` (gate)
-- [ ] **S22.** Notebook `5_classify_batch.ipynb` (+ fallback toggle)
-- [ ] **S23.** Notebook `6_traverse_replies.ipynb`
-- [ ] **S24.** Notebook `7_cluster_claims.ipynb`
-- [ ] **S25.** Notebook `8_route_and_assemble.ipynb`
+- [x] **S20.** Notebook `3_enrich_text.ipynb`
+- [x] **S21.** Notebook `4_calibrate_classifier.ipynb` (gate)
+- [x] **S22.** Notebook `5_classify_batch.ipynb` (+ fallback toggle)
+- [x] **S23.** Notebook `6_traverse_replies.ipynb`
+- [x] **S24.** Notebook `7_cluster_claims.ipynb`
+- [x] **S25.** Notebook `8_route_and_assemble.ipynb`
 
 ### Integration & verification
-- [ ] **S26.** DeltaBay-side `altendor-loader.ts` + `altendor/debate.json` import
-- [ ] **S27.** Merge loader output into `funding-debate.ts` (skeleton fallback preserved)
-- [ ] **S28.** Vitest `funding-debate.altendor.test.ts`
+- [x] **S26.** DeltaBay-side `altendor-loader.ts` + `altendor/debate.json` import
+- [x] **S27.** Merge loader output into `funding-debate.ts` (skeleton fallback preserved)
+- [x] **S28.** Vitest `funding-debate.altendor.test.ts`
 - [ ] **S29.** End-to-end smoke (`n=2`, `budget_usd=0.50`)
-- [ ] **S30.** Notebook `9_publish_to_deltabay.ipynb` + visual click-through
+- [x] **S30.** Notebook `9_publish_to_deltabay.ipynb` + visual click-through
 
 ### Demo polish
-- [ ] **S31.** Notebook 8 final markdown summary cell (papers × Q × endorsements × flags × participants)
+- [x] **S31.** Notebook 8 final markdown summary cell (papers × Q × endorsements × flags × participants)
 - [ ] **S32.** README / runbook in `altendor/`
 
 ---
