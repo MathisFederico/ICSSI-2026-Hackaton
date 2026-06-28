@@ -222,3 +222,5 @@ node_modules/
 # Direnv
 .direnv/
 
+# GBQ
+gbq_key.json

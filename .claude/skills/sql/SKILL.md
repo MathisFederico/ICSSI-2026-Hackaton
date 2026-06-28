@@ -24,6 +24,58 @@ allowed-tools:
 - always check schema memory files before writing queries against `dimensions-ai.data_analytics`
 - For Dimensions data, specifically with regards to the `dimensions-ai.data_analytics.publications` the `journal` field is deprecated. Use `source` instead
 
+## Running SQL from notebooks
+
+Notebooks should not embed SQL as inline Python strings. The pattern is:
+
+1. Put the `.sql` file next to the notebook under `queries/` (e.g.
+   `notebooks/queries/my_query.sql`), with the standard header block.
+2. **Always put the dry-run and the actual run in separate cells**, so the
+   user can inspect the dry-run output (validity, scan size) before
+   committing to the real query. Don't combine them — that defeats the
+   point of the pre-flight check.
+
+   Dry-run cell — use :func:`altendor.bigquery.preflight.preflight`, which
+   validates the SQL, prints a per-table breakdown, and raises if the
+   upper-bound scan exceeds the cap (default 50 GiB). It handles the
+   RLS-masking case transparently by falling back to referenced-table
+   metadata sizes:
+
+   ```python
+   from pathlib import Path
+   from google.cloud import bigquery
+   from altendor.bigquery.preflight import preflight
+
+   client = bigquery.Client()
+   sql = Path("queries/my_query.sql").read_text()
+   preflight(client, sql)  # raises QuerySizeExceeded if > 50 GiB
+   ```
+
+   Pass `max_bytes=...` to tighten or loosen the cap for a known-expensive query.
+
+   Actual-run cell (separate):
+
+   ```python
+   job = client.query(sql, job_config=bigquery.QueryJobConfig(use_query_cache=False))
+   df = job.result().to_dataframe()
+   if job.total_bytes_processed is not None:
+       print(f"Scanned {job.total_bytes_processed / 1e6:.2f} MB")
+   df
+   ```
+
+3. For parameterised queries, use BigQuery query parameters
+   (`bigquery.ScalarQueryParameter`, `bigquery.ArrayQueryParameter`) passed
+   via `QueryJobConfig(query_parameters=[...])`. Do **not** use Python
+   f-string interpolation — even against trusted data, it is an SQL-injection
+   vector and breaks query-plan caching.
+4. The `%%bigquery` magic (from `bigquery-magics`) is fine for ad-hoc
+   exploration but should not replace the `.sql` file for anything you
+   intend to commit.
+5. Auth: rely on Application Default Credentials. Point
+   `GOOGLE_APPLICATION_CREDENTIALS` at a service-account JSON in `.env` and
+   call `dotenv.load_dotenv()` once at the top of the notebook —
+   `bigquery.Client()` will pick the creds up automatically.
+
 ## Style
 
 - Use uppercase for SQL keywords (`SELECT`, `FROM`, `WHERE`, `JOIN`, etc.)
@@ -130,3 +182,18 @@ ORDER BY
 ```
 
 Other table names include `patents`, `source_titles`, `grants`, `datasets`, `organizations`, `org_groups`, `researchers`, `reports`, `policy_documents`, `clinical_trials`
+
+### Refreshing or adding a vendor schema
+
+To pull schemas for a new dataset (Altmetric, OpenAlex, etc.) into
+`gbq_schema/<vendor>/`, run the `altendor.schema` dumper from the repo:
+
+```bash
+uv run python -m altendor.schema \
+    altmetric-endorsements.altmetric_on_gbq \
+    .claude/skills/sql/gbq_schema/altmetric/
+```
+
+It writes one `<table>.yaml` per table in the dataset, in the same format as
+the Dimensions files. The same command refreshes existing schemas — re-run
+when the upstream schema changes.

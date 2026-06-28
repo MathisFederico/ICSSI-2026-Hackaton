@@ -1,0 +1,78 @@
+table: posts
+fields:
+- name: id
+  type: STRING
+  description: Unique Altmetric post identifier.
+- name: type
+  type: STRING
+  description: 'Type of mention (One of: f1000, rdt, qna, pinterest, weibo, msm, blog, peer_review, policy,
+    guideline, gplus, tweet, bluesky, fbwall, wikipedia, video, linkedin, patent, podcast).'
+- name: subtype
+  type: STRING
+  description: 'Some posts, such as X or Bluesky have a subtype associated to them (Currently, one of:
+    repost, quoted, original).'
+- name: date
+  type: TIMESTAMP
+  description: Timestamp on which the mention was made.
+- name: year
+  type: INTEGER
+  description: Year of post date, (YYYY).
+- name: title
+  type: STRING
+  description: Original title; no maximum length.
+- name: url
+  type: STRING
+  description: The URL of the post.
+- name: research_outputs_ids
+  type: STRING
+  mode: REPEATED
+  description: Array of identifiers mentioned in the post. The array length of this field is the number
+    of mentions for the post. Identifiers in this array match the field 'id' in the 'research_outputs'
+    table.
+- name: attention_source_id
+  type: STRING
+  description: Identifier of the related attention source. Matches the field 'id' in the 'attention_sources'
+    table.
+- name: attention_source
+  type: RECORD
+  description: Details from the related attention source, contains a subset of columns from the 'attention_sources'
+    table.
+  fields:
+  - name: type
+    type: STRING
+    description: 'The type of mention source (one of: blog, msm, policy, tw, sw, gplus, rdt, fb).'
+  - name: name
+    type: STRING
+    description: The name of the attention source.
+  - name: country
+    type: STRING
+    description: The country name of the attention source, where it is known.
+- name: identifiers
+  type: RECORD
+  description: Listing of resolved research output identifiers (i.e. Dimension publications) mentioned
+    within the post.
+  fields:
+  - name: dimensions
+    type: RECORD
+    description: Dimensions identifiers for publications, datasets and clinical trials related to the
+      research outputs identified within the post.
+    fields:
+    - name: publication_ids
+      type: STRING
+      mode: REPEATED
+      description: Links to Dimensions 'publications' table (for the associated research outputs identified
+        within the post).
+    - name: clinical_trial_ids
+      type: STRING
+      mode: REPEATED
+      description: Links to Dimensions 'clinical_trials' table (for the associated research outputs identified
+        within the post).
+    - name: dataset_ids
+      type: STRING
+      mode: REPEATED
+      description: Links to Dimensions 'datasets' table (for the associated research outputs identified
+        within the post).
+- name: retweet
+  type: BOOLEAN
+  description: Indicates whether the post is sharing an original X post, with the value TRUE when the
+    post is a repost.

@@ -1,0 +1,35 @@
+table: attention_sources
+fields:
+- name: id
+  type: STRING
+  description: Altmetric's unique internal ID for this attention source.
+- name: type
+  type: STRING
+  description: 'The type of mention source (one of: blog, msm, policy, guideline, tw, bsk, sw, gplus,
+    rdt, fb).'
+- name: name
+  type: STRING
+  description: The name of the attention source.
+- name: description
+  type: STRING
+  description: The description of the attention source.
+- name: country
+  type: STRING
+  description: The country name of the attention source where it is known.
+- name: city
+  type: STRING
+  description: The city of the attention source, where it is known.
+- name: social_media
+  type: RECORD
+  description: Social media user details for supported attention source types.
+  fields:
+  - name: screen_name
+    type: STRING
+    description: The user ID of the source, where it exists (i.e., ID number for Facebook profiles or
+      the string handle for X/Bluesky/Reddit profiles).
+  - name: followers
+    type: INTEGER
+    description: The number of followers this source has, where available.
+- name: permalink
+  type: STRING
+  description: The permanent link to the source. For podcasts, this is the homepage url.

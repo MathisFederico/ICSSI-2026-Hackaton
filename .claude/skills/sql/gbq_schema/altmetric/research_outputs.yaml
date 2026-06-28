@@ -1,0 +1,161 @@
+table: research_outputs
+fields:
+- name: id
+  type: STRING
+  description: Unique Altmetric identifier.
+- name: altmetric_score
+  type: FLOAT
+  description: Altmetric Attention Score.
+- name: date
+  type: STRING
+  description: Date of publication where available. Online publication date is preferred over the print
+    publication date.
+- name: year
+  type: INTEGER
+  description: Year of publication (YYYY).
+- name: title
+  type: STRING
+  description: Research output title.
+- name: parent_id
+  type: STRING
+  description: ID of parent entity (e.g. a chapter's book ID)
+- name: readers
+  type: RECORD
+  description: Number of people who have bookmarked this output.
+  fields:
+  - name: mendeley
+    type: INTEGER
+    description: Number of people who have bookmarked this output in Mendeley.
+- name: last_mentioned_at
+  type: TIMESTAMP
+  description: Most recent date of mention of this publication.
+- name: identifiers
+  type: RECORD
+  description: Research output identifiers
+  fields:
+  - name: doi
+    type: STRING
+    description: Digital Object Identifier.
+  - name: pmid
+    type: STRING
+    description: PubMed ID.
+  - name: ads_id
+    type: STRING
+    description: SAO/NASA Astrophysics Data System (ADS) ID.
+  - name: arxiv_id
+    type: STRING
+    description: arXiv identifier.
+  - name: ssrn
+    type: STRING
+    description: SSRN (formerly known as Social Science Research Network) ID.
+  - name: repec
+    type: STRING
+    description: Research Papers in Economics ID.
+  - name: pmcid
+    type: STRING
+    description: PubMed Central ID.
+  - name: url
+    type: STRING
+    description: URL link to the publication.
+  - name: nct_id
+    type: STRING
+    description: National Clinical Trial identifier.
+  - name: urn
+    type: STRING
+    description: Uniform Resource Name.
+  - name: handles
+    type: STRING
+    mode: REPEATED
+    description: Handle.net IDs (Institutional publication identifier).
+  - name: handle_prefixes
+    type: STRING
+    mode: REPEATED
+    description: Prefixes of the handles as per https://handle.net/prefix.html (institutional identifier).
+  - name: isbns
+    type: STRING
+    mode: REPEATED
+    description: Array of ISBNs for books (can contain multiple values).
+  - name: dimensions
+    type: RECORD
+    description: Dimensions identifiers for publications, datasets and clinical trials.
+    fields:
+    - name: publication_id
+      type: STRING
+      description: Links to Dimensions 'publications' table.
+    - name: clinical_trial_id
+      type: STRING
+      description: Links to Dimensions 'clinical_trials' table.
+    - name: dataset_id
+      type: STRING
+      description: Links to Dimensions 'datasets' table.
+- name: mentions
+  type: RECORD
+  description: Aggregated counts of Altmetric posts where the research output has been mentioned.
+  fields:
+  - name: fbwall
+    type: INTEGER
+    description: Number of posts that have mentioned the output on Facebook walls.
+  - name: blog
+    type: INTEGER
+    description: Number of posts on blogs that have mentioned the research output.
+  - name: gplus
+    type: INTEGER
+    description: Number of posts that mentioned the research output from accounts on Google+.
+  - name: msm
+    type: INTEGER
+    description: Number of posts in news sources that have referenced the research output.
+  - name: rdt
+    type: INTEGER
+    description: Number of posts by Redditors that have referenced this research output.
+  - name: qna
+    type: INTEGER
+    description: Mentions of research outputs in questions and answers (Q&A) from the StackExchange network
+  - name: tweet
+    type: INTEGER
+    description: Number of X (formerly Twitter) posts referencing this research output.
+  - name: policy
+    type: INTEGER
+    description: Number of policy documents that have cited this research output.
+  - name: patent
+    type: INTEGER
+    description: Number of patents that have cited this research output.
+  - name: wikipedia
+    type: INTEGER
+    description: Number of wikipedia pages that have referenced this research output.
+  - name: video
+    type: INTEGER
+    description: Number of videos on Youtube which have referenced this research output.
+  - name: peer_review
+    type: INTEGER
+    description: Reviews of this research output on the public peer review platforms PubPeer (historical)
+      and/or Publons (current).
+  - name: weibo
+    type: INTEGER
+    description: Historical mentions of this research output in the Chinese microblogging platform Sina
+      Weibo; deprecated source as of July 2015.
+  - name: linkedin
+    type: INTEGER
+    description: Historical mentions of this research output on LinkedIn; deprecated source as of March
+      2014.
+  - name: pinterest
+    type: INTEGER
+    description: Historical mentions of this research output in Pinterest pins; deprecated source as of
+      June 2013.
+  - name: bluesky
+    type: INTEGER
+    description: Number of BlueSky posts referencing this research output.
+  - name: guideline
+    type: INTEGER
+    description: Number of clinical decision guidelines referencing this research output.
+  - name: podcast
+    type: INTEGER
+    description: Number of podcasts mentioning this research output.
+  - name: f1000
+    type: INTEGER
+    description: Recommendations of this research output on H1, formerly Faculty Opinions, also formerly
+      F1000Prime.
+  - name: post_ids
+    type: STRING
+    mode: REPEATED
+    description: Listing of all Altmetric post identifiers where this research output was mentioned. (Link
+      to the `posts` dataset.)

@@ -40,6 +40,19 @@ the `.envrc`.
 - **Dimensions** — request access at
   <https://www.dimensions.ai/dimensions-api/>. Used for live publication,
   grant, patent, and clinical-trial queries.
+- **Google BigQuery (Altmetric)** — the Altmetric data lives in BigQuery as a
+  linked dataset (`altmetric-endorsements.altmetric_on_gbq`) subscribed from
+  the Analytics Hub listing **"Altmetrics on BigQuery"**. The publisher
+  applies *row-level security* keyed to your user identity, so auth must use
+  **Application Default Credentials**, not a service-account JSON (an SA
+  would be a different principal and RLS would return zero rows). One-time
+  setup (`gcloud` ships in the Nix devshell):
+    ```bash
+    gcloud auth application-default login
+    gcloud config set project altmetric-endorsements
+    ```
+    Then verify with `notebooks/0_altmetrics_gbq_setup.ipynb` — no env vars
+    required.
 
 `.env` is gitignored; never commit it or paste it into screenshots/chat.
 
