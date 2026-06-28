@@ -1,0 +1,870 @@
+table: patents
+description: "Dimensions Patents data set - https://app.dimensions.ai/discover/patent\n\
+  Schema documentation: https://docs.dimensions.ai/bigquery/datasource-patents.html\n\
+  \n\n---\nPrivacy and Terms of Use\n\nFor information on how we process personal\
+  \ information, please refer to the privacy policy at https://www.dimensions.ai/privacy/.\n\
+  \nRedistribution / external use of this Dimensions dataset is prohibited without\
+  \ prior written approval. If you need to share or display Dimensions data in a way\
+  \ that\u2019s not permitted by our agreement with you, please get in touch at info@dimensions.com."
+fields:
+- name: id
+  type: STRING
+  description: Dimensions patent ID.
+- name: title
+  type: STRING
+  description: The title of the patent.
+- name: abstract
+  type: STRING
+  description: Abstract or description of the patent.
+- name: kind
+  type: STRING
+  description: 'Kind of the patent - varies on jurisdiction and type of patent. Eg:
+    A1.'
+- name: jurisdiction
+  type: STRING
+  description: "The jurisdiction where the patent was granted, e.g. \u2018US\u2019\
+    , \u2018DE\u2019, \u2018EP\u2019\u2026"
+- name: application_number
+  type: STRING
+  description: Patent application number
+- name: publication_date
+  type: STRING
+  description: Date of publication of a patent.
+- name: filing_date
+  type: STRING
+  description: Date when the patent was filed.
+- name: priority_date
+  type: STRING
+  description: The earliest filing date in a family of patent applications.
+- name: granted_date
+  type: STRING
+  description: The date on which the official body grants the patent.
+- name: expiration_date
+  type: STRING
+  description: Date when the patent expires.
+- name: family_id
+  type: STRING
+  description: Identifier of the corresponding patent family.
+- name: filing_status
+  type: STRING
+  description: "Filing Status of the patent e.g. \u2018Application\u2019 or \u2018\
+    Grant\u2019."
+- name: inventor_names
+  type: STRING
+  mode: REPEATED
+  description: List of names of the people who invented the patent.
+- name: researcher_ids
+  type: STRING
+  mode: REPEATED
+  description: Researcher IDs matched to the patent's inventors list.
+- name: inventors
+  type: RECORD
+  mode: REPEATED
+  description: List of details of the people who invented the patent.
+  fields:
+  - name: name
+    type: STRING
+    description: Name of the inventor.
+  - name: researcher_id
+    type: STRING
+    description: Researcher ID matched to the inventor.
+  - name: address
+    type: RECORD
+    description: Address details associated with the inventor.
+    fields:
+    - name: country
+      type: STRING
+    - name: city
+      type: STRING
+    - name: state
+      type: STRING
+    - name: street
+      type: STRING
+    - name: address
+      type: STRING
+    - name: postcode
+      type: STRING
+- name: current_assignee
+  type: RECORD
+  mode: REPEATED
+  description: List of organisations currently owning the patent.
+  fields:
+  - name: name
+    type: STRING
+    description: Name of the assignee.
+  - name: grid_id
+    type: STRING
+    description: Disambiguated GRID organisation for the assignee.
+  - name: country
+    type: STRING
+    description: Country of the assignee, as provided from the IFI CLAIMS source.
+      Normally a valid ISO country code, but this is not always the case.
+  - name: city
+    type: STRING
+    description: City/address for assignee as provided from the IFI CLAIMS source.
+  - name: state
+    type: STRING
+    description: State of the assignee as provided from the IFI CLAIMS source.
+  - name: street
+    type: STRING
+    description: Street details of the assignee as provided from the IFI CLAIMS source.
+  - name: country_code
+    type: STRING
+    description: A valid ISO country code for the assignee, as provided by the resolved
+      GRID ID (if available).
+- name: original_assignee
+  type: RECORD
+  mode: REPEATED
+  description: List of organisations that first owned the patent.
+  fields:
+  - name: name
+    type: STRING
+    description: Name of the assignee.
+  - name: grid_id
+    type: STRING
+    description: Disambiguated GRID organisation for the assignee.
+  - name: country
+    type: STRING
+    description: Country of the assignee, as provided from the IFI CLAIMS source.
+      Normally a valid ISO country code, but this is not always the case.
+  - name: city
+    type: STRING
+    description: City/address for assignee as provided from the IFI CLAIMS source.
+  - name: state
+    type: STRING
+    description: State of the assignee as provided from the IFI CLAIMS source.
+  - name: street
+    type: STRING
+    description: Street details of the assignee as provided from the IFI CLAIMS source.
+  - name: country_code
+    type: STRING
+    description: A valid ISO country code for the assignee, as provided by the resolved
+      GRID ID (if available).
+- name: assignee_orgs
+  type: STRING
+  mode: REPEATED
+  description: 'List of disambiguated GRID organisations who own or have owned the
+    rights of the patent (note: this is a combination GRID identifiers from ``current_assignee``
+    and ``original_assignee`` fields).'
+- name: current_assignee_orgs
+  type: STRING
+  mode: REPEATED
+  description: List of disambiguated GRID organisations who currently own the rights
+    of the patent.
+- name: original_assignee_orgs
+  type: STRING
+  mode: REPEATED
+  description: List of disambiguated GRID organisations who have owned the rights
+    of the patent.
+- name: assignee_countries
+  type: STRING
+  mode: REPEATED
+  description: 'List of countries of the assignees of the patent, expressed as GeoNames
+    codes (note: this is the combination of the ``current_assignee_countries`` and
+    ``original_assignee_countries`` fields).'
+- name: current_assignee_countries
+  type: STRING
+  mode: REPEATED
+  description: 'List of countries of the assignees who currently own the rights of
+    the patent, expressed as GeoNames codes (note: this value is extracted independently
+    from GRID).'
+- name: original_assignee_countries
+  type: STRING
+  mode: REPEATED
+  description: 'List of countries of the assignees who have owned the rights of the
+    patent, expressed as GeoNames codes (note: this value is extracted independently
+    from GRID).'
+- name: legal_status
+  type: STRING
+  description: "The legal status of the patent, e.g. \u2018Granted\u2019, \u2018Active\u2019\
+    , \u2018Abandoned\u2019 etc.."
+- name: legal_events
+  type: RECORD
+  mode: REPEATED
+  description: List of legal status events, covering a variety of entries, procedural
+    steps, and post-grant events.
+  fields:
+  - name: code
+    type: STRING
+    description: 1-4 character code.
+  - name: title
+    type: STRING
+    description: Description of the legal status code.
+  - name: date
+    type: STRING
+    description: Date of public notification.
+  - name: attributes
+    type: RECORD
+    mode: REPEATED
+    description: Attributes associated with the legal event.
+    fields:
+    - name: label
+      type: STRING
+      description: Description of the legal status code.
+    - name: value
+      type: STRING
+      description: Legal status event description.
+- name: concepts
+  type: RECORD
+  mode: REPEATED
+  description: 'Concepts describing the main topics of a patent (note: automatically
+    derived from the patent text using machine learning).'
+  fields:
+  - name: concept
+    type: STRING
+    description: Normalized noun phrase describing a main topic within the document.
+      Automatically derived using machine learning techniques.
+  - name: relevance
+    type: FLOAT
+    description: "Relevance ranking of the normalized noun phrase within the document\u2019\
+      s field of study."
+- name: orange_book
+  type: RECORD
+  mode: REPEATED
+  description: Data added from the FDA Orange Book Data Files.
+  fields:
+  - name: applicant_full_name
+    type: STRING
+    description: Full name of the firm holding legal responsibility for the new drug
+      application.
+  - name: ingredients
+    type: STRING
+    mode: REPEATED
+    description: Active ingredient(s) for the product.
+  - name: application_number
+    type: STRING
+    description: FDA assigned number to the application.
+  - name: drug_name
+    type: STRING
+    description: Trade name of the product as shown on the labelling.
+- name: federal_support
+  type: STRING
+  mode: REPEATED
+  description: Part(s) of the patent description text covering federal funding.
+- name: cpc
+  type: STRING
+  mode: REPEATED
+  description: Cooperative Patent Classification Categorization
+- name: ipcr
+  type: STRING
+  mode: REPEATED
+  description: International Patent Classification Reform Categorization
+- name: document_category
+  type: STRING
+  description: 'Present for US patents only. Categories are derived from kind codes
+    and include: Defensive, Design, Plant, Reissue, Statutory, Utility.'
+- name: category_bra
+  type: RECORD
+  description: Broad Research Areas
+  fields:
+  - name: values
+    type: STRING
+    mode: REPEATED
+    description: Listing of all category values assigned to this particular record.
+  - name: full
+    type: RECORD
+    mode: REPEATED
+    description: A complete listing of category values, assigned to this particular
+      record, including the unique Dimensions identifier associated with each category
+      value.
+    fields:
+    - name: id
+      type: STRING
+      description: Dimensions specific identifier assigned to the category value.
+    - name: value
+      type: STRING
+      description: Category value associated with the simple classification scheme.
+- name: category_for
+  type: RECORD
+  description: ANZSRC Fields of Research classification
+  fields:
+  - name: first_level
+    type: RECORD
+    description: First level of categorisation within the classification scheme.
+    fields:
+    - name: codes
+      type: STRING
+      mode: REPEATED
+      description: A consolidated list of all category-specific codes at a particular
+        classification level, assigned to this record.
+    - name: full
+      type: RECORD
+      mode: REPEATED
+      description: A listing of category values at a specific classification level,
+        assigned to this particular record, including the unique Dimensions identifier
+        associated with each category value.
+      fields:
+      - name: id
+        type: STRING
+        description: Dimensions specific identifier assigned to the category value.
+      - name: code
+        type: STRING
+        description: Numeric or non-numeric category value code. Value is classification
+          scheme specific.
+      - name: name
+        type: STRING
+        description: Individual category value description, excluding the classification
+          scheme specific code prefix.
+  - name: second_level
+    type: RECORD
+    description: Second level of categorisation within the classification scheme.
+    fields:
+    - name: codes
+      type: STRING
+      mode: REPEATED
+      description: A consolidated list of all category-specific codes at a particular
+        classification level, assigned to this record.
+    - name: full
+      type: RECORD
+      mode: REPEATED
+      description: A listing of category values at a specific classification level,
+        assigned to this particular record, including the unique Dimensions identifier
+        associated with each category value.
+      fields:
+      - name: id
+        type: STRING
+        description: Dimensions specific identifier assigned to the category value.
+      - name: code
+        type: STRING
+        description: Numeric or non-numeric category value code. Value is classification
+          scheme specific.
+      - name: name
+        type: STRING
+        description: Individual category value description, excluding the classification
+          scheme specific code prefix.
+- name: category_hra
+  type: RECORD
+  description: Health Research Areas
+  fields:
+  - name: values
+    type: STRING
+    mode: REPEATED
+    description: Listing of all category values assigned to this particular record.
+  - name: full
+    type: RECORD
+    mode: REPEATED
+    description: A complete listing of category values, assigned to this particular
+      record, including the unique Dimensions identifier associated with each category
+      value.
+    fields:
+    - name: id
+      type: STRING
+      description: Dimensions specific identifier assigned to the category value.
+    - name: value
+      type: STRING
+      description: Category value associated with the simple classification scheme.
+- name: category_hrcs_hc
+  type: RECORD
+  description: HRCS - Health Categories
+  fields:
+  - name: values
+    type: STRING
+    mode: REPEATED
+    description: Listing of all category values assigned to this particular record.
+  - name: full
+    type: RECORD
+    mode: REPEATED
+    description: A complete listing of category values, assigned to this particular
+      record, including the unique Dimensions identifier associated with each category
+      value.
+    fields:
+    - name: id
+      type: STRING
+      description: Dimensions specific identifier assigned to the category value.
+    - name: value
+      type: STRING
+      description: Category value associated with the simple classification scheme.
+- name: category_hrcs_rac
+  type: RECORD
+  description: "HRCS \u2013 Research Activity Codes"
+  fields:
+  - name: codes
+    type: STRING
+    mode: REPEATED
+    description: Listing of all category specific codes assigned to this particular
+      record.
+  - name: full
+    type: RECORD
+    mode: REPEATED
+    description: A complete listing of category values, assigned to this particular
+      record, including the unique Dimensions identifier associated with each category
+      value.
+    fields:
+    - name: id
+      type: STRING
+      description: Dimensions specific identifier assigned to the category value.
+    - name: code
+      type: STRING
+      description: Numeric or non-numeric category value code. Value is classification
+        scheme specific.
+    - name: name
+      type: STRING
+      description: Individual category value description, excluding the classification
+        scheme specific code prefix.
+- name: category_icrp_cso
+  type: RECORD
+  description: ICRP Common Scientific Outline
+  fields:
+  - name: codes
+    type: STRING
+    mode: REPEATED
+    description: Listing of all category specific codes assigned to this particular
+      record.
+  - name: full
+    type: RECORD
+    mode: REPEATED
+    description: A complete listing of category values, assigned to this particular
+      record, including the unique Dimensions identifier associated with each category
+      value.
+    fields:
+    - name: id
+      type: STRING
+      description: Dimensions specific identifier assigned to the category value.
+    - name: code
+      type: STRING
+      description: Numeric or non-numeric category value code. Value is classification
+        scheme specific.
+    - name: name
+      type: STRING
+      description: Individual category value description, excluding the classification
+        scheme specific code prefix.
+- name: category_icrp_ct
+  type: RECORD
+  description: ICRP Cancer Types
+  fields:
+  - name: values
+    type: STRING
+    mode: REPEATED
+    description: Listing of all category values assigned to this particular record.
+  - name: full
+    type: RECORD
+    mode: REPEATED
+    description: A complete listing of category values, assigned to this particular
+      record, including the unique Dimensions identifier associated with each category
+      value.
+    fields:
+    - name: id
+      type: STRING
+      description: Dimensions specific identifier assigned to the category value.
+    - name: value
+      type: STRING
+      description: Category value associated with the simple classification scheme.
+- name: category_rcdc
+  type: RECORD
+  description: Research, Condition, and Disease Categorization
+  fields:
+  - name: values
+    type: STRING
+    mode: REPEATED
+    description: Listing of all category values assigned to this particular record.
+  - name: full
+    type: RECORD
+    mode: REPEATED
+    description: A complete listing of category values, assigned to this particular
+      record, including the unique Dimensions identifier associated with each category
+      value.
+    fields:
+    - name: id
+      type: STRING
+      description: Dimensions specific identifier assigned to the category value.
+    - name: value
+      type: STRING
+      description: Category value associated with the simple classification scheme.
+- name: category_sdg
+  type: RECORD
+  description: '** Deprecated: Category type SDG has been deprecated for this source
+    type **'
+  fields:
+  - name: codes
+    type: STRING
+    mode: REPEATED
+    description: Listing of all category specific codes assigned to this particular
+      record.
+  - name: full
+    type: RECORD
+    mode: REPEATED
+    description: A complete listing of category values, assigned to this particular
+      record, including the unique Dimensions identifier associated with each category
+      value.
+    fields:
+    - name: id
+      type: STRING
+      description: Dimensions specific identifier assigned to the category value.
+    - name: code
+      type: STRING
+      description: Numeric or non-numeric category value code. Value is classification
+        scheme specific.
+    - name: name
+      type: STRING
+      description: Individual category value description, excluding the classification
+        scheme specific code prefix.
+- name: category_uoa
+  type: RECORD
+  description: '** Deprecated: Category type UoA has been deprecated for this source
+    type **'
+  fields:
+  - name: codes
+    type: STRING
+    mode: REPEATED
+    description: Listing of all category specific codes assigned to this particular
+      record.
+  - name: full
+    type: RECORD
+    mode: REPEATED
+    description: A complete listing of category values, assigned to this particular
+      record, including the unique Dimensions identifier associated with each category
+      value.
+    fields:
+    - name: id
+      type: STRING
+      description: Dimensions specific identifier assigned to the category value.
+    - name: code
+      type: STRING
+      description: Numeric or non-numeric category value code. Value is classification
+        scheme specific.
+    - name: name
+      type: STRING
+      description: Individual category value description, excluding the classification
+        scheme specific code prefix.
+- name: categories
+  type: RECORD
+  description: Versioned categorisations.
+  fields:
+  - name: hra_v1
+    type: RECORD
+    fields:
+    - name: values
+      type: STRING
+      mode: REPEATED
+      description: Listing of all category values assigned to this particular record.
+    - name: full
+      type: RECORD
+      mode: REPEATED
+      description: A complete listing of category values, assigned to this particular
+        record, including the unique Dimensions identifier associated with each category
+        value.
+      fields:
+      - name: id
+        type: STRING
+        description: Dimensions specific identifier assigned to the category value.
+      - name: value
+        type: STRING
+        description: Category value associated with the simple classification scheme.
+  - name: rcdc_v1
+    type: RECORD
+    description: '** Deprecated: RCDC v1 is deprecated, please preference the top-level
+      category field **'
+    fields:
+    - name: values
+      type: STRING
+      mode: REPEATED
+      description: Listing of all category values assigned to this particular record.
+    - name: full
+      type: RECORD
+      mode: REPEATED
+      description: A complete listing of category values, assigned to this particular
+        record, including the unique Dimensions identifier associated with each category
+        value.
+      fields:
+      - name: id
+        type: STRING
+        description: Dimensions specific identifier assigned to the category value.
+      - name: value
+        type: STRING
+        description: Category value associated with the simple classification scheme.
+  - name: bra_v2020
+    type: RECORD
+    fields:
+    - name: values
+      type: STRING
+      mode: REPEATED
+      description: Listing of all category values assigned to this particular record.
+    - name: full
+      type: RECORD
+      mode: REPEATED
+      description: A complete listing of category values, assigned to this particular
+        record, including the unique Dimensions identifier associated with each category
+        value.
+      fields:
+      - name: id
+        type: STRING
+        description: Dimensions specific identifier assigned to the category value.
+      - name: value
+        type: STRING
+        description: Category value associated with the simple classification scheme.
+  - name: hrcs_hc_v2020
+    type: RECORD
+    fields:
+    - name: values
+      type: STRING
+      mode: REPEATED
+      description: Listing of all category values assigned to this particular record.
+    - name: full
+      type: RECORD
+      mode: REPEATED
+      description: A complete listing of category values, assigned to this particular
+        record, including the unique Dimensions identifier associated with each category
+        value.
+      fields:
+      - name: id
+        type: STRING
+        description: Dimensions specific identifier assigned to the category value.
+      - name: value
+        type: STRING
+        description: Category value associated with the simple classification scheme.
+  - name: hrcs_rac_v2020
+    type: RECORD
+    fields:
+    - name: codes
+      type: STRING
+      mode: REPEATED
+      description: Listing of all category specific codes assigned to this particular
+        record.
+    - name: full
+      type: RECORD
+      mode: REPEATED
+      description: A complete listing of category values, assigned to this particular
+        record, including the unique Dimensions identifier associated with each category
+        value.
+      fields:
+      - name: id
+        type: STRING
+        description: Dimensions specific identifier assigned to the category value.
+      - name: code
+        type: STRING
+        description: Numeric or non-numeric category value code. Value is classification
+          scheme specific.
+      - name: name
+        type: STRING
+        description: Individual category value description, excluding the classification
+          scheme specific code prefix.
+  - name: icrp_cso_v2020
+    type: RECORD
+    fields:
+    - name: codes
+      type: STRING
+      mode: REPEATED
+      description: Listing of all category specific codes assigned to this particular
+        record.
+    - name: full
+      type: RECORD
+      mode: REPEATED
+      description: A complete listing of category values, assigned to this particular
+        record, including the unique Dimensions identifier associated with each category
+        value.
+      fields:
+      - name: id
+        type: STRING
+        description: Dimensions specific identifier assigned to the category value.
+      - name: code
+        type: STRING
+        description: Numeric or non-numeric category value code. Value is classification
+          scheme specific.
+      - name: name
+        type: STRING
+        description: Individual category value description, excluding the classification
+          scheme specific code prefix.
+  - name: icrp_ct_v2020
+    type: RECORD
+    fields:
+    - name: values
+      type: STRING
+      mode: REPEATED
+      description: Listing of all category values assigned to this particular record.
+    - name: full
+      type: RECORD
+      mode: REPEATED
+      description: A complete listing of category values, assigned to this particular
+        record, including the unique Dimensions identifier associated with each category
+        value.
+      fields:
+      - name: id
+        type: STRING
+        description: Dimensions specific identifier assigned to the category value.
+      - name: value
+        type: STRING
+        description: Category value associated with the simple classification scheme.
+  - name: for_2020_v2022
+    type: RECORD
+    fields:
+    - name: first_level
+      type: RECORD
+      description: First level of categorisation within the classification scheme.
+      fields:
+      - name: codes
+        type: STRING
+        mode: REPEATED
+        description: A consolidated list of all category-specific codes at a particular
+          classification level, assigned to this record.
+      - name: full
+        type: RECORD
+        mode: REPEATED
+        description: A listing of category values at a specific classification level,
+          assigned to this particular record, including the unique Dimensions identifier
+          associated with each category value.
+        fields:
+        - name: id
+          type: STRING
+          description: Dimensions specific identifier assigned to the category value.
+        - name: code
+          type: STRING
+          description: Numeric or non-numeric category value code. Value is classification
+            scheme specific.
+        - name: name
+          type: STRING
+          description: Individual category value description, excluding the classification
+            scheme specific code prefix.
+    - name: second_level
+      type: RECORD
+      description: Second level of categorisation within the classification scheme.
+      fields:
+      - name: codes
+        type: STRING
+        mode: REPEATED
+        description: A consolidated list of all category-specific codes at a particular
+          classification level, assigned to this record.
+      - name: full
+        type: RECORD
+        mode: REPEATED
+        description: A listing of category values at a specific classification level,
+          assigned to this particular record, including the unique Dimensions identifier
+          associated with each category value.
+        fields:
+        - name: id
+          type: STRING
+          description: Dimensions specific identifier assigned to the category value.
+        - name: code
+          type: STRING
+          description: Numeric or non-numeric category value code. Value is classification
+            scheme specific.
+        - name: name
+          type: STRING
+          description: Individual category value description, excluding the classification
+            scheme specific code prefix.
+  - name: rcdc_v2023
+    type: RECORD
+    fields:
+    - name: values
+      type: STRING
+      mode: REPEATED
+      description: Listing of all category values assigned to this particular record.
+    - name: full
+      type: RECORD
+      mode: REPEATED
+      description: A complete listing of category values, assigned to this particular
+        record, including the unique Dimensions identifier associated with each category
+        value.
+      fields:
+      - name: id
+        type: STRING
+        description: Dimensions specific identifier assigned to the category value.
+      - name: value
+        type: STRING
+        description: Category value associated with the simple classification scheme.
+  - name: rcdc_v2024
+    type: RECORD
+    fields:
+    - name: values
+      type: STRING
+      mode: REPEATED
+      description: Listing of all category values assigned to this particular record.
+    - name: full
+      type: RECORD
+      mode: REPEATED
+      description: A complete listing of category values, assigned to this particular
+        record, including the unique Dimensions identifier associated with each category
+        value.
+      fields:
+      - name: id
+        type: STRING
+        description: Dimensions specific identifier assigned to the category value.
+      - name: value
+        type: STRING
+        description: Category value associated with the simple classification scheme.
+- name: reference_ids
+  type: STRING
+  mode: REPEATED
+  description: List of Dimensions IDs of the patents which are cited by this patent.
+    This field may in some cases include identifiers of provisional patent applications
+    that are not yet in the Dimensions database. In such cases, on the Dimensions
+    web application patent detail page, the total number of references will be slightly
+    different as the web application only shows fully resolved identifiers.
+- name: funding_details
+  type: RECORD
+  mode: REPEATED
+  description: List of GRID organisations funding the patent, together with the respective
+    Dimensions grant ID.
+  fields:
+  - name: grid_id
+    type: STRING
+    description: Dimensions organisation identifier (GRID) of the funder, if identified.
+  - name: grant_id
+    type: STRING
+    description: Dimensions grant identifier linked to the funding, if identified.
+- name: publication_ids
+  type: STRING
+  mode: REPEATED
+  description: 'List of Dimensions IDs of the publications referenced in the front-page
+    of the patent. Note: all resolved publications present within patent can be found
+    within the non-patent citations array (``npc_references``).'
+- name: application_reference_id
+  type: STRING
+  description: The id of the referenced application.
+- name: npc_references
+  type: RECORD
+  mode: REPEATED
+  description: Non-patent citations references determined from the patent document.
+  fields:
+  - name: publication_id
+    type: STRING
+    description: Dimension's publication identifier for the citation within the patent.
+  - name: source
+    type: STRING
+    description: Location within the patent of the non-patent citation, current options
+      are `front_page` or `in_text`.
+- name: claims_amount
+  type: INTEGER
+  description: The number of claims associated with a patent.
+- name: figures_amount
+  type: INTEGER
+  description: The number of figures provided for this patent.
+- name: associated_grant_ids
+  type: STRING
+  mode: REPEATED
+  description: List of Dimensions IDs of the grants associated to the patent.
+- name: funder_orgs
+  type: STRING
+  mode: REPEATED
+  description: List of GRID organisations funding the patent.
+- name: date_imported_gbq
+  type: TIMESTAMP
+  description: Timestamp when the patent was last imported into BigQuery. Incremental
+    changes can be determined using this field. Note, however at certain times all
+    records may be reimported.
+- name: expiration_year
+  type: INTEGER
+  description: Year when the patent expires.
+- name: publication_year
+  type: INTEGER
+  description: Year of publication of a patent.
+- name: filing_year
+  type: INTEGER
+  description: The year the patent was filed.
+- name: priority_year
+  type: INTEGER
+  description: The filing year of the earliest application of which priority is claimed.
+- name: granted_year
+  type: INTEGER
+  description: The year on which the official body grants the patent.
+- name: cited_by_ids
+  type: STRING
+  mode: REPEATED
+  description: List of Dimensions IDs of the patents that cite this patent.
+- name: family_members_ids
+  type: STRING
+  mode: REPEATED
+  description: Dimensions IDs of the other patents in the same family (excluding the
+    patent the relationship originates from).
+- name: family_count
+  type: INTEGER
+  description: The total count of patents in the same family.

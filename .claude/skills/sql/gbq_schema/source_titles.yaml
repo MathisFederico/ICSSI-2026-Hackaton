@@ -1,0 +1,27 @@
+table: source_titles
+description: Dimensions Journals data set
+fields:
+- name: id
+  type: STRING
+- name: type
+  type: STRING
+- name: title
+  type: STRING
+- name: linkout
+  type: STRING
+- name: issns
+  type: STRING
+  mode: REPEATED
+- name: issn_print
+  type: STRING
+- name: issn_online
+  type: STRING
+- name: journal_lists
+  type: STRING
+  mode: REPEATED
+- name: snip
+  type: FLOAT
+- name: sjr
+  type: FLOAT
+- name: start_year
+  type: INTEGER

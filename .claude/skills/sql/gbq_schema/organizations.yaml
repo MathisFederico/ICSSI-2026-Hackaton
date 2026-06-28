@@ -1,0 +1,299 @@
+table: organizations
+description: "Schema documentation: https://docs.dimensions.ai/bigquery/datasource-organizations.html\n\
+  \n\n---\nPrivacy and Terms of Use\n\nFor information on how we process personal\
+  \ information, please refer to the privacy policy at https://www.dimensions.ai/privacy/.\n\
+  \nRedistribution / external use of this Dimensions dataset is prohibited without\
+  \ prior written approval. If you need to share or display Dimensions data in a way\
+  \ that\u2019s not permitted by our agreement with you, please get in touch at info@dimensions.com."
+fields:
+- name: id
+  type: STRING
+  description: "Unique Digital Science identifier for the organization. E.g., \u201C\
+    grid.26999.3d\u201D."
+- name: status
+  type: STRING
+  description: "For an active institute, this is always set to \u201Cactive\u201D."
+- name: redirect
+  type: STRING
+  description: Organization identifier where a redirected organization now points
+    to.
+- name: name
+  type: STRING
+  description: "Name of the organization. E.g., \u201CUniversity of Tokyo\u201D for\
+    \ grid.26999.3d"
+- name: established
+  type: INTEGER
+  description: Year when the organization was established
+- name: closed
+  type: INTEGER
+  description: If the organization has closed, the year when it was closed.
+- name: legal_country_code
+  type: STRING
+  description: Country where the organization is incorporated or registered.
+- name: aliases
+  type: STRING
+  mode: REPEATED
+  description: A list of other names the institute is known as.
+- name: acronyms
+  type: STRING
+  mode: REPEATED
+  description: A list of short acronyms the institute is known as (e.g. MRC for the
+    Medical Research Council)
+- name: types
+  type: STRING
+  mode: REPEATED
+  description: "Type of an organization Eg. \u201CCompany\u201D, \u201CEducation\u201D\
+    , \u201CGovernment\u201D etc."
+- name: links
+  type: STRING
+  mode: REPEATED
+  description: URLs linking to things such as the homepage of the institute.
+- name: wikipedia_url
+  type: STRING
+  description: URL of the wikipedia page for the institute.
+- name: labels
+  type: RECORD
+  mode: REPEATED
+  description: The name of the institute in different languages.
+  fields:
+  - name: label
+    type: STRING
+    description: The institute name in a language variant.
+  - name: iso639
+    type: STRING
+    description: The ISO-639-1 language code.
+- name: relationships
+  type: RECORD
+  mode: REPEATED
+  description: Any relationships the institute has to others.
+  fields:
+  - name: type
+    type: STRING
+    description: The type of relationship E.g. 'Parent', 'Child'.
+  - name: label
+    type: STRING
+    description: The name of the related institute.
+  - name: id
+    type: STRING
+    description: The organization ID of the related institute.
+- name: external_ids
+  type: RECORD
+  description: Other IDs known to refer to the institute.
+  fields:
+  - name: isni
+    type: RECORD
+    description: ISNI IDs for this organization.
+    fields:
+    - name: preferred
+      type: STRING
+      description: The preferred ID for this type, or null if none are preferred.
+    - name: all
+      type: STRING
+      mode: REPEATED
+      description: A list of all IDs for the 'External ID type' format.
+  - name: fundref
+    type: RECORD
+    description: Fundref IDs for this organization.
+    fields:
+    - name: preferred
+      type: STRING
+      description: The preferred ID for this type, or null if none are preferred.
+    - name: all
+      type: STRING
+      mode: REPEATED
+      description: A list of all IDs for the 'External ID type' format.
+  - name: orgref
+    type: RECORD
+    description: OrgRef IDs for this organization.
+    fields:
+    - name: preferred
+      type: STRING
+      description: The preferred ID for this type, or null if none are preferred.
+    - name: all
+      type: STRING
+      mode: REPEATED
+      description: A list of all IDs for the 'External ID type' format.
+  - name: wikidata
+    type: RECORD
+    description: WikiData IDs for this organization.
+    fields:
+    - name: preferred
+      type: STRING
+      description: The preferred ID for this type, or null if none are preferred.
+    - name: all
+      type: STRING
+      mode: REPEATED
+      description: A list of all IDs for the 'External ID type' format.
+  - name: ror
+    type: RECORD
+    description: ROR IDs for this organization.
+    fields:
+    - name: preferred
+      type: STRING
+      description: The preferred ID for this type, or null if none are preferred.
+    - name: all
+      type: STRING
+      mode: REPEATED
+      description: A list of all IDs for the 'External ID type' format.
+  - name: hesa
+    type: RECORD
+    description: HESA IDs for this organization.
+    fields:
+    - name: preferred
+      type: STRING
+      description: The preferred ID for this type, or null if none are preferred.
+    - name: all
+      type: STRING
+      mode: REPEATED
+      description: A list of all IDs for the 'External ID type' format.
+  - name: ucas
+    type: RECORD
+    description: UCAS IDs for this organization.
+    fields:
+    - name: preferred
+      type: STRING
+      description: The preferred ID for this type, or null if none are preferred.
+    - name: all
+      type: STRING
+      mode: REPEATED
+      description: A list of all IDs for the 'External ID type' format.
+  - name: ukprn
+    type: RECORD
+    description: UKPRN IDs for this organization.
+    fields:
+    - name: preferred
+      type: STRING
+      description: The preferred ID for this type, or null if none are preferred.
+    - name: all
+      type: STRING
+      mode: REPEATED
+      description: A list of all IDs for the 'External ID type' format.
+  - name: cnrs
+    type: RECORD
+    description: CNRS IDs for this organization.
+    fields:
+    - name: preferred
+      type: STRING
+      description: The preferred ID for this type, or null if none are preferred.
+    - name: all
+      type: STRING
+      mode: REPEATED
+      description: A list of all IDs for the 'External ID type' format.
+- name: address
+  type: RECORD
+  description: Address associated with the institute.
+  fields:
+  - name: line_1
+    type: STRING
+    description: First line of the address.
+  - name: line_2
+    type: STRING
+    description: Second line of the address.
+  - name: line_3
+    type: STRING
+    description: Third line of the address.
+  - name: latitude
+    type: FLOAT
+    description: Latitude of the institute.
+  - name: longitude
+    type: FLOAT
+    description: Longitude of the institute.
+  - name: postcode
+    type: STRING
+    description: The postcode/zipcode.
+  - name: city
+    type: STRING
+    description: The name of the city.
+  - name: state
+    type: STRING
+    description: The name of the state/region.
+  - name: state_code
+    type: STRING
+    description: The ISO 3166-2 region code.
+  - name: country
+    type: STRING
+    description: The name of the country.
+  - name: country_code
+    type: STRING
+    description: The ISO 3166-1 alpha-2 code of the country.
+  - name: country_geonames_id
+    type: INTEGER
+    description: The GeoNames ID of the country.
+  - name: geonames_city
+    type: RECORD
+    description: The GeoNames data of the institutes associated city.
+    fields:
+    - name: id
+      type: INTEGER
+      description: The GeoNames ID.
+    - name: city
+      type: STRING
+      description: The name of the city.
+    - name: nuts_level1
+      type: RECORD
+      description: The NUTS level 1 region the GeoNames city is in.
+      fields:
+      - name: name
+        type: STRING
+      - name: code
+        type: STRING
+    - name: nuts_level2
+      type: RECORD
+      description: The NUTS level 2 region the GeoNames city is in.
+      fields:
+      - name: name
+        type: STRING
+      - name: code
+        type: STRING
+    - name: nuts_level3
+      type: RECORD
+      description: The NUTS level 3 region the GeoNames city is in.
+      fields:
+      - name: name
+        type: STRING
+      - name: code
+        type: STRING
+    - name: geonames_admin1
+      type: RECORD
+      description: The admin1 region in GeoNames.
+      fields:
+      - name: name
+        type: STRING
+      - name: ascii_name
+        type: STRING
+      - name: code
+        type: STRING
+    - name: geonames_admin2
+      type: RECORD
+      description: The geonames_admin2 region in GeoNames.
+      fields:
+      - name: name
+        type: STRING
+      - name: ascii_name
+        type: STRING
+      - name: code
+        type: STRING
+    - name: license
+      type: RECORD
+      fields:
+      - name: attribution
+        type: STRING
+      - name: license
+        type: STRING
+- name: organization_child_ids
+  type: STRING
+  mode: REPEATED
+  description: Child organization IDs.
+- name: organization_parent_ids
+  type: STRING
+  mode: REPEATED
+  description: Parent organization IDs.
+- name: organization_related_ids
+  type: STRING
+  mode: REPEATED
+  description: Related organization IDs.
+- name: organization_recursive_child_ids
+  type: STRING
+  mode: REPEATED
+  description: Child organization IDs, recursively resolved using the record as the
+    root of the resolved hierarchy.

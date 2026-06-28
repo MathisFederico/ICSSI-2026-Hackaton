@@ -1,0 +1,1135 @@
+table: grants
+description: "Dimensions Grants data set - https://app.dimensions.ai/discover/grant\n\
+  Schema documentation: https://docs.dimensions.ai/bigquery/datasource-grants.html\n\
+  \n\n---\nPrivacy and Terms of Use\n\nFor information on how we process personal\
+  \ information, please refer to the privacy policy at https://www.dimensions.ai/privacy/.\n\
+  \nRedistribution / external use of this Dimensions dataset is prohibited without\
+  \ prior written approval. If you need to share or display Dimensions data in a way\
+  \ that\u2019s not permitted by our agreement with you, please get in touch at info@dimensions.com."
+fields:
+- name: id
+  type: STRING
+  description: Dimensions grant ID.
+- name: title
+  type: STRING
+  description: Title of the grant in English (if the grant language is not English,
+    this field contains a translation of the title).
+- name: abstract
+  type: STRING
+  description: Abstract or summary from a grant proposal.
+- name: language
+  type: STRING
+  description: Grant original language, as ISO 639-1 language codes.
+- name: original_title
+  type: RECORD
+  description: Title of the grant in its original language.
+  fields:
+  - name: value
+    type: STRING
+  - name: language
+    type: STRING
+- name: original_abstract
+  type: RECORD
+  description: Abstract of the grant in its original language.
+  fields:
+  - name: value
+    type: STRING
+  - name: language
+    type: STRING
+- name: linkout
+  type: STRING
+  description: Original URL for the grant.
+- name: grant_number
+  type: STRING
+  description: "** Deprecated: please preference use of the field `project_numbers`\
+    \ ** \u2013 Grant identifier, as provided by the source (e.g., funder, aggregator)\
+    \ the grant was derived from."
+- name: foa_number
+  type: STRING
+  description: The funding opportunity announcement (FOA) number, where available
+    e.g. for grants from the US National Institute of Health (NIH) or from the National
+    Science Foundation (NSF).
+- name: start_date
+  type: STRING
+  description: Date when the grant starts, in the format 'YYYY-MM-DD'.
+- name: end_date
+  type: STRING
+  description: Date when the grant ends.
+- name: start_year
+  type: INTEGER
+  description: Year when the grant starts.
+- name: end_year
+  type: INTEGER
+  description: Year when the grant ends.
+- name: active_years
+  type: INTEGER
+  mode: REPEATED
+  description: List of active years for a grant.
+- name: investigators
+  type: RECORD
+  mode: REPEATED
+  description: List of details about investigators, including affiliations and roles
+    e.g. 'PI' or 'Co-PI'.
+  fields:
+  - name: first_name
+    type: STRING
+  - name: last_name
+    type: STRING
+  - name: researcher_id
+    type: STRING
+    description: The Dimensions assigned researcher ID.
+  - name: role
+    type: STRING
+    description: 'Role of the researcher: PI or Co-PI.'
+  - name: affiliations
+    type: RECORD
+    mode: REPEATED
+    description: Affiliation details associated with the grantee.
+    fields:
+    - name: affiliation
+      type: STRING
+      description: The raw affiliation string as seen on the source type.
+    - name: grid_ids
+      type: STRING
+      mode: REPEATED
+      description: The assigned GRID IDs based on this affiliation.
+    - name: cities
+      type: INTEGER
+      mode: REPEATED
+      description: The cities identified in the affiliation, as geoname IDs.
+    - name: countries_territories
+      type: STRING
+      mode: REPEATED
+      description: The country/territories identified in the affiliation, as ISO-3166
+        alpha-2 codes.
+    - name: states
+      type: STRING
+      mode: REPEATED
+      description: The states/regions identified in the affiliation, as ISO 3166-2
+        codes.
+- name: researcher_ids
+  type: STRING
+  mode: REPEATED
+  description: List of Dimensions researchers IDs associated to the grant.
+- name: research_orgs
+  type: STRING
+  mode: REPEATED
+  description: 'List of GRID organisations receiving the grant (note: identifiers
+    are automatically extracted from the source text and can be missing in some cases).'
+- name: organisation_details
+  type: RECORD
+  mode: REPEATED
+  description: List of details regarding organisations receiving the grant. The original
+    raw affiliation data in provided, even in cases where the organization was successfully
+    mapped to a GRID identifier.
+  fields:
+  - name: name
+    type: STRING
+  - name: city
+    type: STRING
+    description: 'City of the research organisation receiving the grant (note: the
+      non-standardised original city affiliation information is provided).'
+  - name: country
+    type: STRING
+    description: 'Country of the research organisation receiving the grant (note:
+      the non-standardised original country affiliation information is provided).'
+  - name: grid_id
+    type: STRING
+- name: research_org_cities
+  type: INTEGER
+  mode: REPEATED
+  description: List of cities of the research organisations receiving the grant, expressed
+    as GeoNames identifiers.
+- name: research_org_state_codes
+  type: STRING
+  mode: REPEATED
+  description: "List of state codes of the organisations receiving the grant, expressed\
+    \ as GeoName codes (ISO\u200C-3166-2)."
+- name: research_org_countries
+  type: STRING
+  mode: REPEATED
+  description: List of countries of the research organisations receiving the grant,
+    expressed as GeoName codes.
+- name: funder_org
+  type: STRING
+  description: The organisation funding the grant. This is normally a GRID organisation,
+    but in very few cases a Dimensions funder ID is used.
+- name: funder_org_cities
+  type: INTEGER
+  mode: REPEATED
+  description: List of cities linked to the organisation funding the grant, expressed
+    as GeoNames codes.
+- name: funder_org_state_codes
+  type: STRING
+  mode: REPEATED
+  description: "List of state codes linked to the organisation funding the grant,\
+    \ expressed as GeoName codes (ISO\u200C-3166-2)."
+- name: funder_org_countries
+  type: STRING
+  mode: REPEATED
+  description: List of countries linked to the organisation funding the grant, expressed
+    as GeoNames codes.
+- name: funding_amount
+  type: FLOAT
+  description: Funding amount awarded in original funding currency.
+- name: funding_currency
+  type: STRING
+  description: Original funding currency.
+- name: funding_aud
+  type: FLOAT
+  description: Funding amount awarded in AUD.
+- name: funding_cad
+  type: FLOAT
+  description: Funding amount awarded in CAD.
+- name: funding_chf
+  type: FLOAT
+  description: Funding amount awarded in CHF.
+- name: funding_eur
+  type: FLOAT
+  description: Funding amount awarded in EUR.
+- name: funding_gbp
+  type: FLOAT
+  description: Funding amount awarded in GBP.
+- name: funding_jpy
+  type: FLOAT
+  description: Funding amount awarded in JPY.
+- name: funding_nzd
+  type: FLOAT
+  description: Funding amount awarded in NZD.
+- name: funding_usd
+  type: FLOAT
+  description: Funding amount awarded in USD.
+- name: funding_cny
+  type: FLOAT
+  description: Funding amount awarded in CNY.
+- name: category_bra
+  type: RECORD
+  description: Broad Research Areas
+  fields:
+  - name: values
+    type: STRING
+    mode: REPEATED
+    description: Listing of all category values assigned to this particular record.
+  - name: full
+    type: RECORD
+    mode: REPEATED
+    description: A complete listing of category values, assigned to this particular
+      record, including the unique Dimensions identifier associated with each category
+      value.
+    fields:
+    - name: id
+      type: STRING
+      description: Dimensions specific identifier assigned to the category value.
+    - name: value
+      type: STRING
+      description: Category value associated with the simple classification scheme.
+- name: category_for
+  type: RECORD
+  description: ANZSRC Fields of Research classification
+  fields:
+  - name: first_level
+    type: RECORD
+    description: First level of categorisation within the classification scheme.
+    fields:
+    - name: codes
+      type: STRING
+      mode: REPEATED
+      description: A consolidated list of all category-specific codes at a particular
+        classification level, assigned to this record.
+    - name: full
+      type: RECORD
+      mode: REPEATED
+      description: A listing of category values at a specific classification level,
+        assigned to this particular record, including the unique Dimensions identifier
+        associated with each category value.
+      fields:
+      - name: id
+        type: STRING
+        description: Dimensions specific identifier assigned to the category value.
+      - name: code
+        type: STRING
+        description: Numeric or non-numeric category value code. Value is classification
+          scheme specific.
+      - name: name
+        type: STRING
+        description: Individual category value description, excluding the classification
+          scheme specific code prefix.
+  - name: second_level
+    type: RECORD
+    description: Second level of categorisation within the classification scheme.
+    fields:
+    - name: codes
+      type: STRING
+      mode: REPEATED
+      description: A consolidated list of all category-specific codes at a particular
+        classification level, assigned to this record.
+    - name: full
+      type: RECORD
+      mode: REPEATED
+      description: A listing of category values at a specific classification level,
+        assigned to this particular record, including the unique Dimensions identifier
+        associated with each category value.
+      fields:
+      - name: id
+        type: STRING
+        description: Dimensions specific identifier assigned to the category value.
+      - name: code
+        type: STRING
+        description: Numeric or non-numeric category value code. Value is classification
+          scheme specific.
+      - name: name
+        type: STRING
+        description: Individual category value description, excluding the classification
+          scheme specific code prefix.
+- name: category_hra
+  type: RECORD
+  description: Health Research Areas
+  fields:
+  - name: values
+    type: STRING
+    mode: REPEATED
+    description: Listing of all category values assigned to this particular record.
+  - name: full
+    type: RECORD
+    mode: REPEATED
+    description: A complete listing of category values, assigned to this particular
+      record, including the unique Dimensions identifier associated with each category
+      value.
+    fields:
+    - name: id
+      type: STRING
+      description: Dimensions specific identifier assigned to the category value.
+    - name: value
+      type: STRING
+      description: Category value associated with the simple classification scheme.
+- name: category_hrcs_hc
+  type: RECORD
+  description: HRCS - Health Categories
+  fields:
+  - name: values
+    type: STRING
+    mode: REPEATED
+    description: Listing of all category values assigned to this particular record.
+  - name: full
+    type: RECORD
+    mode: REPEATED
+    description: A complete listing of category values, assigned to this particular
+      record, including the unique Dimensions identifier associated with each category
+      value.
+    fields:
+    - name: id
+      type: STRING
+      description: Dimensions specific identifier assigned to the category value.
+    - name: value
+      type: STRING
+      description: Category value associated with the simple classification scheme.
+- name: category_hrcs_rac
+  type: RECORD
+  description: "HRCS \u2013 Research Activity Codes"
+  fields:
+  - name: codes
+    type: STRING
+    mode: REPEATED
+    description: Listing of all category specific codes assigned to this particular
+      record.
+  - name: full
+    type: RECORD
+    mode: REPEATED
+    description: A complete listing of category values, assigned to this particular
+      record, including the unique Dimensions identifier associated with each category
+      value.
+    fields:
+    - name: id
+      type: STRING
+      description: Dimensions specific identifier assigned to the category value.
+    - name: code
+      type: STRING
+      description: Numeric or non-numeric category value code. Value is classification
+        scheme specific.
+    - name: name
+      type: STRING
+      description: Individual category value description, excluding the classification
+        scheme specific code prefix.
+- name: category_icrp_cso
+  type: RECORD
+  description: ICRP Common Scientific Outline
+  fields:
+  - name: codes
+    type: STRING
+    mode: REPEATED
+    description: Listing of all category specific codes assigned to this particular
+      record.
+  - name: full
+    type: RECORD
+    mode: REPEATED
+    description: A complete listing of category values, assigned to this particular
+      record, including the unique Dimensions identifier associated with each category
+      value.
+    fields:
+    - name: id
+      type: STRING
+      description: Dimensions specific identifier assigned to the category value.
+    - name: code
+      type: STRING
+      description: Numeric or non-numeric category value code. Value is classification
+        scheme specific.
+    - name: name
+      type: STRING
+      description: Individual category value description, excluding the classification
+        scheme specific code prefix.
+- name: category_icrp_ct
+  type: RECORD
+  description: ICRP Cancer Types
+  fields:
+  - name: values
+    type: STRING
+    mode: REPEATED
+    description: Listing of all category values assigned to this particular record.
+  - name: full
+    type: RECORD
+    mode: REPEATED
+    description: A complete listing of category values, assigned to this particular
+      record, including the unique Dimensions identifier associated with each category
+      value.
+    fields:
+    - name: id
+      type: STRING
+      description: Dimensions specific identifier assigned to the category value.
+    - name: value
+      type: STRING
+      description: Category value associated with the simple classification scheme.
+- name: category_rcdc
+  type: RECORD
+  description: Research, Condition, and Disease Categorization
+  fields:
+  - name: values
+    type: STRING
+    mode: REPEATED
+    description: Listing of all category values assigned to this particular record.
+  - name: full
+    type: RECORD
+    mode: REPEATED
+    description: A complete listing of category values, assigned to this particular
+      record, including the unique Dimensions identifier associated with each category
+      value.
+    fields:
+    - name: id
+      type: STRING
+      description: Dimensions specific identifier assigned to the category value.
+    - name: value
+      type: STRING
+      description: Category value associated with the simple classification scheme.
+- name: category_sdg
+  type: RECORD
+  description: SDG - Sustainable Development Goals
+  fields:
+  - name: codes
+    type: STRING
+    mode: REPEATED
+    description: Listing of all category specific codes assigned to this particular
+      record.
+  - name: full
+    type: RECORD
+    mode: REPEATED
+    description: A complete listing of category values, assigned to this particular
+      record, including the unique Dimensions identifier associated with each category
+      value.
+    fields:
+    - name: id
+      type: STRING
+      description: Dimensions specific identifier assigned to the category value.
+    - name: code
+      type: STRING
+      description: Numeric or non-numeric category value code. Value is classification
+        scheme specific.
+    - name: name
+      type: STRING
+      description: Individual category value description, excluding the classification
+        scheme specific code prefix.
+- name: category_uoa
+  type: RECORD
+  description: Units of Assessment
+  fields:
+  - name: codes
+    type: STRING
+    mode: REPEATED
+    description: Listing of all category specific codes assigned to this particular
+      record.
+  - name: full
+    type: RECORD
+    mode: REPEATED
+    description: A complete listing of category values, assigned to this particular
+      record, including the unique Dimensions identifier associated with each category
+      value.
+    fields:
+    - name: id
+      type: STRING
+      description: Dimensions specific identifier assigned to the category value.
+    - name: code
+      type: STRING
+      description: Numeric or non-numeric category value code. Value is classification
+        scheme specific.
+    - name: name
+      type: STRING
+      description: Individual category value description, excluding the classification
+        scheme specific code prefix.
+- name: categories
+  type: RECORD
+  description: Versioned categorisations.
+  fields:
+  - name: bra_v1
+    type: RECORD
+    description: '** Deprecated: BRA v1 is deprecated, please use BRA v2020 **'
+    fields:
+    - name: values
+      type: STRING
+      mode: REPEATED
+      description: Listing of all category values assigned to this particular record.
+    - name: full
+      type: RECORD
+      mode: REPEATED
+      description: A complete listing of category values, assigned to this particular
+        record, including the unique Dimensions identifier associated with each category
+        value.
+      fields:
+      - name: id
+        type: STRING
+        description: Dimensions specific identifier assigned to the category value.
+      - name: value
+        type: STRING
+        description: Category value associated with the simple classification scheme.
+  - name: for_v1
+    type: RECORD
+    description: '** Deprecated: FoR v1 is deprecated, please use FoR-2020 v2022 **'
+    fields:
+    - name: first_level
+      type: RECORD
+      description: First level of categorisation within the classification scheme.
+      fields:
+      - name: codes
+        type: STRING
+        mode: REPEATED
+        description: A consolidated list of all category-specific codes at a particular
+          classification level, assigned to this record.
+      - name: full
+        type: RECORD
+        mode: REPEATED
+        description: A listing of category values at a specific classification level,
+          assigned to this particular record, including the unique Dimensions identifier
+          associated with each category value.
+        fields:
+        - name: id
+          type: STRING
+          description: Dimensions specific identifier assigned to the category value.
+        - name: code
+          type: STRING
+          description: Numeric or non-numeric category value code. Value is classification
+            scheme specific.
+        - name: name
+          type: STRING
+          description: Individual category value description, excluding the classification
+            scheme specific code prefix.
+    - name: second_level
+      type: RECORD
+      description: Second level of categorisation within the classification scheme.
+      fields:
+      - name: codes
+        type: STRING
+        mode: REPEATED
+        description: A consolidated list of all category-specific codes at a particular
+          classification level, assigned to this record.
+      - name: full
+        type: RECORD
+        mode: REPEATED
+        description: A listing of category values at a specific classification level,
+          assigned to this particular record, including the unique Dimensions identifier
+          associated with each category value.
+        fields:
+        - name: id
+          type: STRING
+          description: Dimensions specific identifier assigned to the category value.
+        - name: code
+          type: STRING
+          description: Numeric or non-numeric category value code. Value is classification
+            scheme specific.
+        - name: name
+          type: STRING
+          description: Individual category value description, excluding the classification
+            scheme specific code prefix.
+  - name: hra_v1
+    type: RECORD
+    fields:
+    - name: values
+      type: STRING
+      mode: REPEATED
+      description: Listing of all category values assigned to this particular record.
+    - name: full
+      type: RECORD
+      mode: REPEATED
+      description: A complete listing of category values, assigned to this particular
+        record, including the unique Dimensions identifier associated with each category
+        value.
+      fields:
+      - name: id
+        type: STRING
+        description: Dimensions specific identifier assigned to the category value.
+      - name: value
+        type: STRING
+        description: Category value associated with the simple classification scheme.
+  - name: hrcs_hc_v1
+    type: RECORD
+    description: '** Deprecated: HRCS HC v1 is deprecated, please use HRCS HC v2020
+      **'
+    fields:
+    - name: values
+      type: STRING
+      mode: REPEATED
+      description: Listing of all category values assigned to this particular record.
+    - name: full
+      type: RECORD
+      mode: REPEATED
+      description: A complete listing of category values, assigned to this particular
+        record, including the unique Dimensions identifier associated with each category
+        value.
+      fields:
+      - name: id
+        type: STRING
+        description: Dimensions specific identifier assigned to the category value.
+      - name: value
+        type: STRING
+        description: Category value associated with the simple classification scheme.
+  - name: hrcs_rac_v1
+    type: RECORD
+    description: '** Deprecated: HRCS RAC v1 is deprecated, please use HRCS RAC v2020
+      **'
+    fields:
+    - name: codes
+      type: STRING
+      mode: REPEATED
+      description: Listing of all category specific codes assigned to this particular
+        record.
+    - name: full
+      type: RECORD
+      mode: REPEATED
+      description: A complete listing of category values, assigned to this particular
+        record, including the unique Dimensions identifier associated with each category
+        value.
+      fields:
+      - name: id
+        type: STRING
+        description: Dimensions specific identifier assigned to the category value.
+      - name: code
+        type: STRING
+        description: Numeric or non-numeric category value code. Value is classification
+          scheme specific.
+      - name: name
+        type: STRING
+        description: Individual category value description, excluding the classification
+          scheme specific code prefix.
+  - name: icrp_cso_v1
+    type: RECORD
+    description: '** Deprecated: ICRP CSO v1 is deprecated, please use ICRP CSO v2020
+      **'
+    fields:
+    - name: codes
+      type: STRING
+      mode: REPEATED
+      description: Listing of all category specific codes assigned to this particular
+        record.
+    - name: full
+      type: RECORD
+      mode: REPEATED
+      description: A complete listing of category values, assigned to this particular
+        record, including the unique Dimensions identifier associated with each category
+        value.
+      fields:
+      - name: id
+        type: STRING
+        description: Dimensions specific identifier assigned to the category value.
+      - name: code
+        type: STRING
+        description: Numeric or non-numeric category value code. Value is classification
+          scheme specific.
+      - name: name
+        type: STRING
+        description: Individual category value description, excluding the classification
+          scheme specific code prefix.
+  - name: icrp_ct_v1
+    type: RECORD
+    description: '** Deprecated: ICRP CT v1 is deprecated, please use ICRP CT v2020
+      **'
+    fields:
+    - name: values
+      type: STRING
+      mode: REPEATED
+      description: Listing of all category values assigned to this particular record.
+    - name: full
+      type: RECORD
+      mode: REPEATED
+      description: A complete listing of category values, assigned to this particular
+        record, including the unique Dimensions identifier associated with each category
+        value.
+      fields:
+      - name: id
+        type: STRING
+        description: Dimensions specific identifier assigned to the category value.
+      - name: value
+        type: STRING
+        description: Category value associated with the simple classification scheme.
+  - name: rcdc_v1
+    type: RECORD
+    description: '** Deprecated: RCDC v1 is deprecated, please preference the top-level
+      category field **'
+    fields:
+    - name: values
+      type: STRING
+      mode: REPEATED
+      description: Listing of all category values assigned to this particular record.
+    - name: full
+      type: RECORD
+      mode: REPEATED
+      description: A complete listing of category values, assigned to this particular
+        record, including the unique Dimensions identifier associated with each category
+        value.
+      fields:
+      - name: id
+        type: STRING
+        description: Dimensions specific identifier assigned to the category value.
+      - name: value
+        type: STRING
+        description: Category value associated with the simple classification scheme.
+  - name: sdg_v1
+    type: RECORD
+    description: '** Deprecated: SDG v1 is deprecated, please use SDG v2021 **'
+    fields:
+    - name: codes
+      type: STRING
+      mode: REPEATED
+      description: Listing of all category specific codes assigned to this particular
+        record.
+    - name: full
+      type: RECORD
+      mode: REPEATED
+      description: A complete listing of category values, assigned to this particular
+        record, including the unique Dimensions identifier associated with each category
+        value.
+      fields:
+      - name: id
+        type: STRING
+        description: Dimensions specific identifier assigned to the category value.
+      - name: code
+        type: STRING
+        description: Numeric or non-numeric category value code. Value is classification
+          scheme specific.
+      - name: name
+        type: STRING
+        description: Individual category value description, excluding the classification
+          scheme specific code prefix.
+  - name: uoa_v1
+    type: RECORD
+    fields:
+    - name: codes
+      type: STRING
+      mode: REPEATED
+      description: Listing of all category specific codes assigned to this particular
+        record.
+    - name: full
+      type: RECORD
+      mode: REPEATED
+      description: A complete listing of category values, assigned to this particular
+        record, including the unique Dimensions identifier associated with each category
+        value.
+      fields:
+      - name: id
+        type: STRING
+        description: Dimensions specific identifier assigned to the category value.
+      - name: code
+        type: STRING
+        description: Numeric or non-numeric category value code. Value is classification
+          scheme specific.
+      - name: name
+        type: STRING
+        description: Individual category value description, excluding the classification
+          scheme specific code prefix.
+  - name: bra_v2020
+    type: RECORD
+    fields:
+    - name: values
+      type: STRING
+      mode: REPEATED
+      description: Listing of all category values assigned to this particular record.
+    - name: full
+      type: RECORD
+      mode: REPEATED
+      description: A complete listing of category values, assigned to this particular
+        record, including the unique Dimensions identifier associated with each category
+        value.
+      fields:
+      - name: id
+        type: STRING
+        description: Dimensions specific identifier assigned to the category value.
+      - name: value
+        type: STRING
+        description: Category value associated with the simple classification scheme.
+  - name: for_v2020
+    type: RECORD
+    description: '** Deprecated: FoR v2020 is deprecated, please use FoR-2020 v2022
+      **'
+    fields:
+    - name: first_level
+      type: RECORD
+      description: First level of categorisation within the classification scheme.
+      fields:
+      - name: codes
+        type: STRING
+        mode: REPEATED
+        description: A consolidated list of all category-specific codes at a particular
+          classification level, assigned to this record.
+      - name: full
+        type: RECORD
+        mode: REPEATED
+        description: A listing of category values at a specific classification level,
+          assigned to this particular record, including the unique Dimensions identifier
+          associated with each category value.
+        fields:
+        - name: id
+          type: STRING
+          description: Dimensions specific identifier assigned to the category value.
+        - name: code
+          type: STRING
+          description: Numeric or non-numeric category value code. Value is classification
+            scheme specific.
+        - name: name
+          type: STRING
+          description: Individual category value description, excluding the classification
+            scheme specific code prefix.
+    - name: second_level
+      type: RECORD
+      description: Second level of categorisation within the classification scheme.
+      fields:
+      - name: codes
+        type: STRING
+        mode: REPEATED
+        description: A consolidated list of all category-specific codes at a particular
+          classification level, assigned to this record.
+      - name: full
+        type: RECORD
+        mode: REPEATED
+        description: A listing of category values at a specific classification level,
+          assigned to this particular record, including the unique Dimensions identifier
+          associated with each category value.
+        fields:
+        - name: id
+          type: STRING
+          description: Dimensions specific identifier assigned to the category value.
+        - name: code
+          type: STRING
+          description: Numeric or non-numeric category value code. Value is classification
+            scheme specific.
+        - name: name
+          type: STRING
+          description: Individual category value description, excluding the classification
+            scheme specific code prefix.
+  - name: hrcs_hc_v2020
+    type: RECORD
+    fields:
+    - name: values
+      type: STRING
+      mode: REPEATED
+      description: Listing of all category values assigned to this particular record.
+    - name: full
+      type: RECORD
+      mode: REPEATED
+      description: A complete listing of category values, assigned to this particular
+        record, including the unique Dimensions identifier associated with each category
+        value.
+      fields:
+      - name: id
+        type: STRING
+        description: Dimensions specific identifier assigned to the category value.
+      - name: value
+        type: STRING
+        description: Category value associated with the simple classification scheme.
+  - name: hrcs_rac_v2020
+    type: RECORD
+    fields:
+    - name: codes
+      type: STRING
+      mode: REPEATED
+      description: Listing of all category specific codes assigned to this particular
+        record.
+    - name: full
+      type: RECORD
+      mode: REPEATED
+      description: A complete listing of category values, assigned to this particular
+        record, including the unique Dimensions identifier associated with each category
+        value.
+      fields:
+      - name: id
+        type: STRING
+        description: Dimensions specific identifier assigned to the category value.
+      - name: code
+        type: STRING
+        description: Numeric or non-numeric category value code. Value is classification
+          scheme specific.
+      - name: name
+        type: STRING
+        description: Individual category value description, excluding the classification
+          scheme specific code prefix.
+  - name: icrp_cso_v2020
+    type: RECORD
+    fields:
+    - name: codes
+      type: STRING
+      mode: REPEATED
+      description: Listing of all category specific codes assigned to this particular
+        record.
+    - name: full
+      type: RECORD
+      mode: REPEATED
+      description: A complete listing of category values, assigned to this particular
+        record, including the unique Dimensions identifier associated with each category
+        value.
+      fields:
+      - name: id
+        type: STRING
+        description: Dimensions specific identifier assigned to the category value.
+      - name: code
+        type: STRING
+        description: Numeric or non-numeric category value code. Value is classification
+          scheme specific.
+      - name: name
+        type: STRING
+        description: Individual category value description, excluding the classification
+          scheme specific code prefix.
+  - name: icrp_ct_v2020
+    type: RECORD
+    fields:
+    - name: values
+      type: STRING
+      mode: REPEATED
+      description: Listing of all category values assigned to this particular record.
+    - name: full
+      type: RECORD
+      mode: REPEATED
+      description: A complete listing of category values, assigned to this particular
+        record, including the unique Dimensions identifier associated with each category
+        value.
+      fields:
+      - name: id
+        type: STRING
+        description: Dimensions specific identifier assigned to the category value.
+      - name: value
+        type: STRING
+        description: Category value associated with the simple classification scheme.
+  - name: sdg_v2021
+    type: RECORD
+    fields:
+    - name: codes
+      type: STRING
+      mode: REPEATED
+      description: Listing of all category specific codes assigned to this particular
+        record.
+    - name: full
+      type: RECORD
+      mode: REPEATED
+      description: A complete listing of category values, assigned to this particular
+        record, including the unique Dimensions identifier associated with each category
+        value.
+      fields:
+      - name: id
+        type: STRING
+        description: Dimensions specific identifier assigned to the category value.
+      - name: code
+        type: STRING
+        description: Numeric or non-numeric category value code. Value is classification
+          scheme specific.
+      - name: name
+        type: STRING
+        description: Individual category value description, excluding the classification
+          scheme specific code prefix.
+  - name: for_2020_v2022
+    type: RECORD
+    fields:
+    - name: first_level
+      type: RECORD
+      description: First level of categorisation within the classification scheme.
+      fields:
+      - name: codes
+        type: STRING
+        mode: REPEATED
+        description: A consolidated list of all category-specific codes at a particular
+          classification level, assigned to this record.
+      - name: full
+        type: RECORD
+        mode: REPEATED
+        description: A listing of category values at a specific classification level,
+          assigned to this particular record, including the unique Dimensions identifier
+          associated with each category value.
+        fields:
+        - name: id
+          type: STRING
+          description: Dimensions specific identifier assigned to the category value.
+        - name: code
+          type: STRING
+          description: Numeric or non-numeric category value code. Value is classification
+            scheme specific.
+        - name: name
+          type: STRING
+          description: Individual category value description, excluding the classification
+            scheme specific code prefix.
+    - name: second_level
+      type: RECORD
+      description: Second level of categorisation within the classification scheme.
+      fields:
+      - name: codes
+        type: STRING
+        mode: REPEATED
+        description: A consolidated list of all category-specific codes at a particular
+          classification level, assigned to this record.
+      - name: full
+        type: RECORD
+        mode: REPEATED
+        description: A listing of category values at a specific classification level,
+          assigned to this particular record, including the unique Dimensions identifier
+          associated with each category value.
+        fields:
+        - name: id
+          type: STRING
+          description: Dimensions specific identifier assigned to the category value.
+        - name: code
+          type: STRING
+          description: Numeric or non-numeric category value code. Value is classification
+            scheme specific.
+        - name: name
+          type: STRING
+          description: Individual category value description, excluding the classification
+            scheme specific code prefix.
+  - name: rcdc_v2023
+    type: RECORD
+    fields:
+    - name: values
+      type: STRING
+      mode: REPEATED
+      description: Listing of all category values assigned to this particular record.
+    - name: full
+      type: RECORD
+      mode: REPEATED
+      description: A complete listing of category values, assigned to this particular
+        record, including the unique Dimensions identifier associated with each category
+        value.
+      fields:
+      - name: id
+        type: STRING
+        description: Dimensions specific identifier assigned to the category value.
+      - name: value
+        type: STRING
+        description: Category value associated with the simple classification scheme.
+  - name: uoa_v2023
+    type: RECORD
+    fields:
+    - name: codes
+      type: STRING
+      mode: REPEATED
+      description: Listing of all category specific codes assigned to this particular
+        record.
+    - name: full
+      type: RECORD
+      mode: REPEATED
+      description: A complete listing of category values, assigned to this particular
+        record, including the unique Dimensions identifier associated with each category
+        value.
+      fields:
+      - name: id
+        type: STRING
+        description: Dimensions specific identifier assigned to the category value.
+      - name: code
+        type: STRING
+        description: Numeric or non-numeric category value code. Value is classification
+          scheme specific.
+      - name: name
+        type: STRING
+        description: Individual category value description, excluding the classification
+          scheme specific code prefix.
+  - name: rcdc_v2024
+    type: RECORD
+    fields:
+    - name: values
+      type: STRING
+      mode: REPEATED
+      description: Listing of all category values assigned to this particular record.
+    - name: full
+      type: RECORD
+      mode: REPEATED
+      description: A complete listing of category values, assigned to this particular
+        record, including the unique Dimensions identifier associated with each category
+        value.
+      fields:
+      - name: id
+        type: STRING
+        description: Dimensions specific identifier assigned to the category value.
+      - name: value
+        type: STRING
+        description: Category value associated with the simple classification scheme.
+- name: keywords
+  type: RECORD
+  mode: REPEATED
+  description: Additional keywords as provided by the source.
+  fields:
+  - name: label
+    type: STRING
+  - name: value
+    type: STRING
+- name: project_numbers
+  type: RECORD
+  mode: REPEATED
+  description: Grant identifiers, as provided by the source (e.g., funder, aggregator)
+    the grant was derived from.
+  fields:
+  - name: label
+    type: STRING
+  - name: value
+    type: STRING
+- name: funding_schemes
+  type: RECORD
+  mode: REPEATED
+  description: Funding schemes as provided by the source.
+  fields:
+  - name: label
+    type: STRING
+  - name: value
+    type: STRING
+- name: activity_code
+  type: STRING
+  description: The NIH activity code for the grant, as provided by the source.
+- name: date_inserted
+  type: TIMESTAMP
+  description: Date when the record was inserted into Dimensions.
+- name: date_imported_gbq
+  type: TIMESTAMP
+  description: Timestamp when the grant was last imported into BigQuery. Incremental
+    changes can be determined using this field. Note, however at certain times during
+    the year all records may be reimported.
+- name: resulting_publication_ids
+  type: STRING
+  mode: REPEATED
+  description: List of Dimension publication IDs that have been supported by this
+    grant.
+- name: funder_org_acronyms
+  type: STRING
+  mode: REPEATED
+  description: List of acronyms for the funding organisation.
+- name: concepts
+  type: RECORD
+  mode: REPEATED
+  description: 'Concepts describing the main topics of a grant (note: automatically
+    derived from the grant text using machine learning).'
+  fields:
+  - name: concept
+    type: STRING
+    description: Normalized noun phrase describing a main topic within the document.
+      Automatically derived using machine learning techniques.
+  - name: relevance
+    type: FLOAT
+    description: "Relevance ranking of the normalized noun phrase within the document\u2019\
+      s field of study."

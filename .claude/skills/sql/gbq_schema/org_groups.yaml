@@ -1,0 +1,12 @@
+table: org_groups
+description: Dimensions - Research and Funder Organization Groups
+fields:
+- name: type
+  type: STRING
+- name: id
+  type: STRING
+- name: name
+  type: STRING
+- name: members
+  type: STRING
+  mode: REPEATED

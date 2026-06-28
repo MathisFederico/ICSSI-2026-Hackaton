@@ -1,0 +1,64 @@
+table: researchers
+description: "Dimensions Researchers data set\nSchema documentation: https://docs.dimensions.ai/bigquery/datasource-researchers.html\n\
+  \n\n---\nPrivacy and Terms of Use\n\nFor information on how we process personal\
+  \ information, please refer to the privacy policy at https://www.dimensions.ai/privacy/.\n\
+  \nRedistribution / external use of this Dimensions dataset is prohibited without\
+  \ prior written approval. If you need to share or display Dimensions data in a way\
+  \ that\u2019s not permitted by our agreement with you, please get in touch at info@dimensions.com."
+fields:
+- name: id
+  type: STRING
+  description: Dimensions researcher ID.
+- name: status
+  type: STRING
+- name: initials
+  type: STRING
+  description: Initials.
+- name: last_name
+  type: STRING
+  description: Last Name.
+- name: first_name
+  type: STRING
+  description: First Name.
+- name: orcid_ids
+  type: STRING
+  mode: REPEATED
+  description: ORCID IDs
+- name: total_publications
+  type: INTEGER
+  description: Total publications count.
+- name: first_publication_year
+  type: INTEGER
+- name: last_publication_year
+  type: INTEGER
+- name: total_grants
+  type: INTEGER
+  description: Total grants count.
+- name: first_grant_year
+  type: INTEGER
+  description: First year the researcher was awarded a grant.
+- name: last_grant_year
+  type: INTEGER
+  description: Last year the researcher was awarded a grant.
+- name: funding_orgs
+  type: STRING
+  mode: REPEATED
+- name: research_orgs
+  type: STRING
+  mode: REPEATED
+  description: All research organizations linked to the researcher.
+- name: current_research_org
+  type: STRING
+  description: The most recent research organization linked to the researcher.
+- name: redirect
+  type: STRING
+  mode: REPEATED
+  description: Indicates status of a researcher ID marked as obsolete. Empty means
+    that the researcher ID was deleted. Otherwise ID provided means that is the new
+    ID into which the obsolete one was redirected. If multiple values are available,
+    it means that the original researcher ID was split into multiple IDs.
+- name: nih_ppid
+  type: STRING
+  mode: REPEATED
+  description: The PI Profile ID (i.e., ppid) is a Researcher ID from the US National
+    Institute of Health (NIH).
